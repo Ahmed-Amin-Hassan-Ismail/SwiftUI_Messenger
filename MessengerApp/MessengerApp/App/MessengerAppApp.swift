@@ -22,11 +22,13 @@ struct MessengerAppApp: App {
                 if shouldShowLoginScreen {
                     
                     LoginView()
+                        .zIndex(0)
                     
                 } else {
                     
                     SplashView(shouldShowLoginScreen: $shouldShowLoginScreen)
                         .transition(.move(edge: .leading))
+                        .zIndex(1)
                     
                 }
                 
