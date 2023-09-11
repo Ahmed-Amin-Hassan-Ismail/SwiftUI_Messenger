@@ -18,15 +18,18 @@ struct HomeView: View {
     
         NavigationStack {
             
-            ScrollView {
-               ActiveNowView()
+            VStack {
+                ActiveNowView()
                     .padding(.top, 20)
                 
+                ChatRowView()
+                    .padding(.horizontal)
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) { profileView }
                 ToolbarItem(placement: .navigationBarTrailing) { newChatView }
             }
+            
         }
     }
 }
