@@ -8,19 +8,35 @@
 import SwiftUI
 
 struct SplashView: View {
+    
+    // MARK: - Properties
+    
+    @Binding var shouldShowLoginScreen: Bool
+    
+    @State private var timeCounter: Int = 0
+    @State private var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    
+    // MARK: - Body
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
+        
+        LottieAnimationView(lottieFile: "splash")
+            .onReceive(timer) { _ in
+                withAnimation(.easeInOut) {
+                    timeCounter += 1
+                    
+                    if timeCounter >= 2 {
+                        
+                        shouldShowLoginScreen = true
+                        
+                    }
+                }
+            }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        SplashView()
+        SplashView(shouldShowLoginScreen: .constant(false))
     }
 }

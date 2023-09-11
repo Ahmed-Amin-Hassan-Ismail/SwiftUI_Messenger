@@ -9,9 +9,28 @@ import SwiftUI
 
 @main
 struct MessengerAppApp: App {
+    
+    // MARK: - Properties
+    
+    @State private var shouldShowLoginScreen: Bool = false
+    
+    
     var body: some Scene {
         WindowGroup {
-            SplashView()
+            ZStack {
+                
+                if shouldShowLoginScreen {
+                    
+                    LoginView()
+                    
+                } else {
+                    
+                    SplashView(shouldShowLoginScreen: $shouldShowLoginScreen)
+                        .transition(.move(edge: .leading))
+                    
+                }
+                
+            }
         }
     }
 }

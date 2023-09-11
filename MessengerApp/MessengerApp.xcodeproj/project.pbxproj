@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,9 @@
 		ACAD4E8C2AAF5D1700EDD02F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACAD4E8B2AAF5D1700EDD02F /* Assets.xcassets */; };
 		ACAD4E8F2AAF5D1700EDD02F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACAD4E8E2AAF5D1700EDD02F /* Preview Assets.xcassets */; };
 		ACAD4E9E2AAF5DCC00EDD02F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAD4E9D2AAF5DCC00EDD02F /* LoginView.swift */; };
+		ACAD4EA22AAF61D200EDD02F /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = ACAD4EA12AAF61D200EDD02F /* Lottie */; };
+		ACAD4EA42AAF61F500EDD02F /* splash.json in Resources */ = {isa = PBXBuildFile; fileRef = ACAD4EA32AAF61F500EDD02F /* splash.json */; };
+		ACAD4EA92AAF625500EDD02F /* LottieAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAD4EA82AAF625500EDD02F /* LottieAnimationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +24,8 @@
 		ACAD4E8B2AAF5D1700EDD02F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACAD4E8E2AAF5D1700EDD02F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		ACAD4E9D2AAF5DCC00EDD02F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		ACAD4EA32AAF61F500EDD02F /* splash.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = splash.json; sourceTree = "<group>"; };
+		ACAD4EA82AAF625500EDD02F /* LottieAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieAnimationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACAD4EA22AAF61D200EDD02F /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				ACAD4E952AAF5D4800EDD02F /* App */,
+				ACAD4EA52AAF61FD00EDD02F /* Utilis */,
 				ACAD4E962AAF5D5000EDD02F /* Extension */,
 				ACAD4E992AAF5D6700EDD02F /* Services */,
 				ACAD4E982AAF5D5F00EDD02F /* Model */,
@@ -138,8 +145,17 @@
 			isa = PBXGroup;
 			children = (
 				ACAD4E8B2AAF5D1700EDD02F /* Assets.xcassets */,
+				ACAD4EA32AAF61F500EDD02F /* splash.json */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		ACAD4EA52AAF61FD00EDD02F /* Utilis */ = {
+			isa = PBXGroup;
+			children = (
+				ACAD4EA82AAF625500EDD02F /* LottieAnimationView.swift */,
+			);
+			path = Utilis;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,6 +174,9 @@
 			dependencies = (
 			);
 			name = MessengerApp;
+			packageProductDependencies = (
+				ACAD4EA12AAF61D200EDD02F /* Lottie */,
+			);
 			productName = MessengerApp;
 			productReference = ACAD4E842AAF5D1600EDD02F /* MessengerApp.app */;
 			productType = "com.apple.product-type.application";
@@ -178,7 +197,7 @@
 				};
 			};
 			buildConfigurationList = ACAD4E7F2AAF5D1600EDD02F /* Build configuration list for PBXProject "MessengerApp" */;
-			compatibilityVersion = "Xcode 13.0";
+			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -186,6 +205,9 @@
 				Base,
 			);
 			mainGroup = ACAD4E7B2AAF5D1600EDD02F;
+			packageReferences = (
+				ACAD4EA02AAF61D200EDD02F /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = ACAD4E852AAF5D1600EDD02F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -200,6 +222,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACAD4EA42AAF61F500EDD02F /* splash.json in Resources */,
 				ACAD4E8F2AAF5D1700EDD02F /* Preview Assets.xcassets in Resources */,
 				ACAD4E8C2AAF5D1700EDD02F /* Assets.xcassets in Resources */,
 			);
@@ -212,6 +235,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACAD4EA92AAF625500EDD02F /* LottieAnimationView.swift in Sources */,
 				ACAD4E9E2AAF5DCC00EDD02F /* LoginView.swift in Sources */,
 				ACAD4E8A2AAF5D1600EDD02F /* SplashView.swift in Sources */,
 				ACAD4E882AAF5D1600EDD02F /* MessengerAppApp.swift in Sources */,
@@ -271,7 +295,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -325,7 +349,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -351,7 +375,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -384,7 +408,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -423,6 +447,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ACAD4EA02AAF61D200EDD02F /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = exactVersion;
+				version = 3.1.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ACAD4EA12AAF61D200EDD02F /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ACAD4EA02AAF61D200EDD02F /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = ACAD4E7C2AAF5D1600EDD02F /* Project object */;
 }
