@@ -8,17 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		ACAD4E882AAF5D1600EDD02F /* MessengerAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAD4E872AAF5D1600EDD02F /* MessengerAppApp.swift */; };
-		ACAD4E8A2AAF5D1600EDD02F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAD4E892AAF5D1600EDD02F /* ContentView.swift */; };
+		ACAD4E8A2AAF5D1600EDD02F /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAD4E892AAF5D1600EDD02F /* SplashView.swift */; };
 		ACAD4E8C2AAF5D1700EDD02F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACAD4E8B2AAF5D1700EDD02F /* Assets.xcassets */; };
 		ACAD4E8F2AAF5D1700EDD02F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACAD4E8E2AAF5D1700EDD02F /* Preview Assets.xcassets */; };
+		ACAD4E9E2AAF5DCC00EDD02F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAD4E9D2AAF5DCC00EDD02F /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		ACAD4E842AAF5D1600EDD02F /* MessengerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessengerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACAD4E872AAF5D1600EDD02F /* MessengerAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessengerAppApp.swift; sourceTree = "<group>"; };
-		ACAD4E892AAF5D1600EDD02F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		ACAD4E892AAF5D1600EDD02F /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		ACAD4E8B2AAF5D1700EDD02F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACAD4E8E2AAF5D1700EDD02F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		ACAD4E9D2AAF5DCC00EDD02F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +53,11 @@
 		ACAD4E862AAF5D1600EDD02F /* MessengerApp */ = {
 			isa = PBXGroup;
 			children = (
-				ACAD4E872AAF5D1600EDD02F /* MessengerAppApp.swift */,
-				ACAD4E892AAF5D1600EDD02F /* ContentView.swift */,
+				ACAD4E952AAF5D4800EDD02F /* App */,
+				ACAD4E962AAF5D5000EDD02F /* Extension */,
+				ACAD4E992AAF5D6700EDD02F /* Services */,
+				ACAD4E982AAF5D5F00EDD02F /* Model */,
+				ACAD4E972AAF5D5C00EDD02F /* Core */,
 				ACAD4E8B2AAF5D1700EDD02F /* Assets.xcassets */,
 				ACAD4E8D2AAF5D1700EDD02F /* Preview Content */,
 			);
@@ -65,6 +70,68 @@
 				ACAD4E8E2AAF5D1700EDD02F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		ACAD4E952AAF5D4800EDD02F /* App */ = {
+			isa = PBXGroup;
+			children = (
+				ACAD4E872AAF5D1600EDD02F /* MessengerAppApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		ACAD4E962AAF5D5000EDD02F /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		ACAD4E972AAF5D5C00EDD02F /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				ACAD4E9A2AAF5D7500EDD02F /* Login */,
+				ACAD4E9B2AAF5DAC00EDD02F /* Splash */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		ACAD4E982AAF5D5F00EDD02F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ACAD4E992AAF5D6700EDD02F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		ACAD4E9A2AAF5D7500EDD02F /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				ACAD4E9D2AAF5DCC00EDD02F /* LoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		ACAD4E9B2AAF5DAC00EDD02F /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				ACAD4E9C2AAF5DB400EDD02F /* View */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		ACAD4E9C2AAF5DB400EDD02F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ACAD4E892AAF5D1600EDD02F /* SplashView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +204,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACAD4E8A2AAF5D1600EDD02F /* ContentView.swift in Sources */,
+				ACAD4E9E2AAF5DCC00EDD02F /* LoginView.swift in Sources */,
+				ACAD4E8A2AAF5D1600EDD02F /* SplashView.swift in Sources */,
 				ACAD4E882AAF5D1600EDD02F /* MessengerAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
