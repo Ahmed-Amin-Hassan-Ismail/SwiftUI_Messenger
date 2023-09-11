@@ -18,6 +18,8 @@
 		AC0D33082AAF7E7900338DDF /* LogoImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0D33072AAF7E7900338DDF /* LogoImageView.swift */; };
 		AC0D330E2AAF804300338DDF /* PrimaryTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0D330D2AAF804300338DDF /* PrimaryTextField.swift */; };
 		AC0D33112AAF81AE00338DDF /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0D33102AAF81AE00338DDF /* PrimaryButton.swift */; };
+		AC0D33152AAF8BAE00338DDF /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0D33142AAF8BAE00338DDF /* HomeView.swift */; };
+		AC0D33192AAF8BC000338DDF /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0D33182AAF8BC000338DDF /* HomeViewModel.swift */; };
 		ACAD4E882AAF5D1600EDD02F /* MessengerAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAD4E872AAF5D1600EDD02F /* MessengerAppApp.swift */; };
 		ACAD4E8A2AAF5D1600EDD02F /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAD4E892AAF5D1600EDD02F /* SplashView.swift */; };
 		ACAD4E8C2AAF5D1700EDD02F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACAD4E8B2AAF5D1700EDD02F /* Assets.xcassets */; };
@@ -41,6 +43,8 @@
 		AC0D33072AAF7E7900338DDF /* LogoImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoImageView.swift; sourceTree = "<group>"; };
 		AC0D330D2AAF804300338DDF /* PrimaryTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryTextField.swift; sourceTree = "<group>"; };
 		AC0D33102AAF81AE00338DDF /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		AC0D33142AAF8BAE00338DDF /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		AC0D33182AAF8BC000338DDF /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		ACAD4E842AAF5D1600EDD02F /* MessengerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessengerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACAD4E872AAF5D1600EDD02F /* MessengerAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessengerAppApp.swift; sourceTree = "<group>"; };
 		ACAD4E892AAF5D1600EDD02F /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
@@ -172,6 +176,31 @@
 			path = PrimaryButton;
 			sourceTree = "<group>";
 		};
+		AC0D33122AAF8BA400338DDF /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				AC0D33162AAF8BB200338DDF /* ViewModel */,
+				AC0D33132AAF8BA800338DDF /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		AC0D33132AAF8BA800338DDF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AC0D33142AAF8BAE00338DDF /* HomeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AC0D33162AAF8BB200338DDF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AC0D33182AAF8BC000338DDF /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		ACAD4E7B2AAF5D1600EDD02F = {
 			isa = PBXGroup;
 			children = (
@@ -233,6 +262,7 @@
 		ACAD4E972AAF5D5C00EDD02F /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				AC0D33122AAF8BA400338DDF /* Home */,
 				AC0D32FE2AAF7DF900338DDF /* SignUp */,
 				ACAD4E9A2AAF5D7500EDD02F /* Login */,
 				ACAD4E9B2AAF5DAC00EDD02F /* Splash */,
@@ -378,6 +408,8 @@
 				AC0D32EF2AAF6D7C00338DDF /* String + EXT.swift in Sources */,
 				ACAD4EA92AAF625500EDD02F /* LottieAnimationView.swift in Sources */,
 				ACAD4E9E2AAF5DCC00EDD02F /* LoginView.swift in Sources */,
+				AC0D33192AAF8BC000338DDF /* HomeViewModel.swift in Sources */,
+				AC0D33152AAF8BAE00338DDF /* HomeView.swift in Sources */,
 				AC0D32F52AAF71EF00338DDF /* Image + EXT.swift in Sources */,
 				AC0D33112AAF81AE00338DDF /* PrimaryButton.swift in Sources */,
 				AC0D32F92AAF729600338DDF /* LoginViewModel.swift in Sources */,

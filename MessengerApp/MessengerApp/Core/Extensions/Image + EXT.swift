@@ -12,4 +12,5 @@ extension Image {
     
     static let logo = Image("logo")
     static let facebook = Image("facebook")
+    static let userProfile = Image("userProfile")
 }
