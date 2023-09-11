@@ -58,7 +58,7 @@
 				ACAD4E992AAF5D6700EDD02F /* Services */,
 				ACAD4E982AAF5D5F00EDD02F /* Model */,
 				ACAD4E972AAF5D5C00EDD02F /* Core */,
-				ACAD4E8B2AAF5D1700EDD02F /* Assets.xcassets */,
+				ACAD4E9F2AAF5DEC00EDD02F /* Resources */,
 				ACAD4E8D2AAF5D1700EDD02F /* Preview Content */,
 			);
 			path = MessengerApp;
@@ -132,6 +132,14 @@
 				ACAD4E892AAF5D1600EDD02F /* SplashView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		ACAD4E9F2AAF5DEC00EDD02F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				ACAD4E8B2AAF5D1700EDD02F /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
