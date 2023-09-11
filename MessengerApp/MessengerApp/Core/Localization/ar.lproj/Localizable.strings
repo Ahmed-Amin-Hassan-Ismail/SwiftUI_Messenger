@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  MessengerApp
+
+  Created by Ahmed Amin on 11/09/2023.
+  
+*/
+
+
+// Login Screen
+
+"login_enter_your_email" = "ادخل حسابك";
+"login_enter_your_password" = "ادخل كلمة السر";
+"login_forget_password" = "هل نسيت كلمة السر؟";
+"login_login_button_title" = "تسجيل";
+"login_or_title" = "او";
+"login_continue_with_facebook" = "تسجيل عبر الفيسبوك";
+"login_do_not_have_account" = "هل ليس لديك حساب شخصى؟";
+"login_sign_up_button_title" = "انشاء حساب";
