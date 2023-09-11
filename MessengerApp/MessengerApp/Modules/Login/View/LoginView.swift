@@ -22,15 +22,26 @@ struct LoginView: View {
             
             VStack {
                 
-                logoImageView
+                LogoImageView(isLogoAppeared: viewModel.isLogoAppeared)
                 
-                emailTextField
+                PrimaryTextField(textFieldInput: $viewModel.email,
+                                 title: "login_enter_your_email".localized,
+                                 isSecured: false)
+                .padding(.bottom, 10)
                 
-                passwordTextField
+                
+                PrimaryTextField(textFieldInput: $viewModel.password,
+                                 title: "login_enter_your_password".localized,
+                                 isSecured: true)
                 
                 forgetButton
                 
-                loginButton
+                
+                PrimaryButton(title: "login_login_button_title".localized) {
+                    
+                    viewModel.didTapOnLoginButton()
+                }
+                .padding(.top, 10)
                 
                 dividerView
                 
@@ -46,39 +57,12 @@ struct LoginView: View {
                 viewModel.isLogoAppeared = true
             }
         }
-        
     }
 }
 
 // MARK: - SETUP View
 
 extension LoginView {
-    
-    private var logoImageView: some View {
-        Image.logo
-            .resizable()
-            .aspectRatio(contentMode: .fit)
-            .frame(width: 150, height: 150)
-            .padding(.top, 50)
-            .padding(.vertical)
-            .offset(y: viewModel.isLogoAppeared ? 0 : -100)
-            .opacity(viewModel.isLogoAppeared ? 1 : 0)
-            .animation(Animation.easeInOut(duration: 1.0),
-                       value: viewModel.isLogoAppeared)
-    }
-    
-    private var emailTextField: some View {
-        
-        TextField("login_enter_your_email".localized, text: $viewModel.email)
-            .modifier(TextFieldModifier())
-            .padding(.bottom, 10)
-    }
-    
-    private var passwordTextField: some View {
-        
-        SecureField("login_enter_your_password".localized, text: $viewModel.password)
-            .modifier(TextFieldModifier())
-    }
     
     private var forgetButton: some View {
         
@@ -98,25 +82,6 @@ extension LoginView {
                     .padding(.top)
             }
         }
-    }
-    
-    private var loginButton: some View {
-        
-        Button {
-            
-            viewModel.didTapOnLoginButton()
-            
-        } label: {
-            
-            Text("login_login_button_title".localized)
-                .font(.headline)
-                .foregroundColor(.white)
-                .padding()
-                .frame(maxWidth: .infinity)
-        }
-        .buttonStyle(.borderedProminent)
-        .buttonBorderShape(.roundedRectangle)
-        .padding(.top, 10)
     }
     
     private var dividerView: some View {
@@ -159,12 +124,17 @@ extension LoginView {
     private var signUpButton: some View {
         HStack(spacing: 3) {
             Text("login_do_not_have_account".localized)
-            
-            Button {
+                        
+            NavigationLink {
+                
+                SignUpView()
+                    .navigationBarBackButtonHidden()
                 
             } label: {
+                
                 Text("login_sign_up_button_title".localized)
                     .fontWeight(.bold)
+                    .underline()
             }
         }
         .font(.footnote)

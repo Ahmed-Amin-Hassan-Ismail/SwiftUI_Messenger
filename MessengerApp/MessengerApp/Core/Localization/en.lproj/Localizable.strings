@@ -19,3 +19,10 @@
 "login_sign_up_button_title" = "Sign Up";
 
 
+// SignUp Screen
+
+"sign_up_enter_user_name" = "Enter Your Full Name";
+"sign_up_already_have_an_account" = "Already have an account?";
+"sign_up_sign_in_button_title" = "Sign In";
+
+

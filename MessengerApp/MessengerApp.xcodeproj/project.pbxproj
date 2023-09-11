@@ -13,6 +13,11 @@
 		AC0D32F52AAF71EF00338DDF /* Image + EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0D32F42AAF71EF00338DDF /* Image + EXT.swift */; };
 		AC0D32F92AAF729600338DDF /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0D32F82AAF729600338DDF /* LoginViewModel.swift */; };
 		AC0D32FD2AAF795400338DDF /* TextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0D32FC2AAF795400338DDF /* TextFieldModifier.swift */; };
+		AC0D33022AAF7E0F00338DDF /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0D33012AAF7E0F00338DDF /* SignUpView.swift */; };
+		AC0D33042AAF7E1C00338DDF /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0D33032AAF7E1C00338DDF /* SignUpViewModel.swift */; };
+		AC0D33082AAF7E7900338DDF /* LogoImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0D33072AAF7E7900338DDF /* LogoImageView.swift */; };
+		AC0D330E2AAF804300338DDF /* PrimaryTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0D330D2AAF804300338DDF /* PrimaryTextField.swift */; };
+		AC0D33112AAF81AE00338DDF /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0D33102AAF81AE00338DDF /* PrimaryButton.swift */; };
 		ACAD4E882AAF5D1600EDD02F /* MessengerAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAD4E872AAF5D1600EDD02F /* MessengerAppApp.swift */; };
 		ACAD4E8A2AAF5D1600EDD02F /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAD4E892AAF5D1600EDD02F /* SplashView.swift */; };
 		ACAD4E8C2AAF5D1700EDD02F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACAD4E8B2AAF5D1700EDD02F /* Assets.xcassets */; };
@@ -31,6 +36,11 @@
 		AC0D32F42AAF71EF00338DDF /* Image + EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image + EXT.swift"; sourceTree = "<group>"; };
 		AC0D32F82AAF729600338DDF /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		AC0D32FC2AAF795400338DDF /* TextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldModifier.swift; sourceTree = "<group>"; };
+		AC0D33012AAF7E0F00338DDF /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		AC0D33032AAF7E1C00338DDF /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		AC0D33072AAF7E7900338DDF /* LogoImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoImageView.swift; sourceTree = "<group>"; };
+		AC0D330D2AAF804300338DDF /* PrimaryTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryTextField.swift; sourceTree = "<group>"; };
+		AC0D33102AAF81AE00338DDF /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		ACAD4E842AAF5D1600EDD02F /* MessengerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessengerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACAD4E872AAF5D1600EDD02F /* MessengerAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessengerAppApp.swift; sourceTree = "<group>"; };
 		ACAD4E892AAF5D1600EDD02F /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
@@ -97,7 +107,10 @@
 		AC0D32FA2AAF792F00338DDF /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				AC0D33052AAF7E6000338DDF /* LogoImageView */,
+				AC0D330C2AAF802E00338DDF /* PrimaryTextField */,
 				AC0D32FB2AAF793B00338DDF /* TextFieldModifier */,
+				AC0D330F2AAF81A100338DDF /* PrimaryButton */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -108,6 +121,55 @@
 				AC0D32FC2AAF795400338DDF /* TextFieldModifier.swift */,
 			);
 			path = TextFieldModifier;
+			sourceTree = "<group>";
+		};
+		AC0D32FE2AAF7DF900338DDF /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				AC0D33002AAF7E0500338DDF /* ViewModel */,
+				AC0D32FF2AAF7E0200338DDF /* View */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		AC0D32FF2AAF7E0200338DDF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AC0D33012AAF7E0F00338DDF /* SignUpView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AC0D33002AAF7E0500338DDF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AC0D33032AAF7E1C00338DDF /* SignUpViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AC0D33052AAF7E6000338DDF /* LogoImageView */ = {
+			isa = PBXGroup;
+			children = (
+				AC0D33072AAF7E7900338DDF /* LogoImageView.swift */,
+			);
+			path = LogoImageView;
+			sourceTree = "<group>";
+		};
+		AC0D330C2AAF802E00338DDF /* PrimaryTextField */ = {
+			isa = PBXGroup;
+			children = (
+				AC0D330D2AAF804300338DDF /* PrimaryTextField.swift */,
+			);
+			path = PrimaryTextField;
+			sourceTree = "<group>";
+		};
+		AC0D330F2AAF81A100338DDF /* PrimaryButton */ = {
+			isa = PBXGroup;
+			children = (
+				AC0D33102AAF81AE00338DDF /* PrimaryButton.swift */,
+			);
+			path = PrimaryButton;
 			sourceTree = "<group>";
 		};
 		ACAD4E7B2AAF5D1600EDD02F = {
@@ -171,6 +233,7 @@
 		ACAD4E972AAF5D5C00EDD02F /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				AC0D32FE2AAF7DF900338DDF /* SignUp */,
 				ACAD4E9A2AAF5D7500EDD02F /* Login */,
 				ACAD4E9B2AAF5DAC00EDD02F /* Splash */,
 			);
@@ -316,10 +379,15 @@
 				ACAD4EA92AAF625500EDD02F /* LottieAnimationView.swift in Sources */,
 				ACAD4E9E2AAF5DCC00EDD02F /* LoginView.swift in Sources */,
 				AC0D32F52AAF71EF00338DDF /* Image + EXT.swift in Sources */,
+				AC0D33112AAF81AE00338DDF /* PrimaryButton.swift in Sources */,
 				AC0D32F92AAF729600338DDF /* LoginViewModel.swift in Sources */,
 				AC0D32F32AAF704900338DDF /* LanguageManager.swift in Sources */,
+				AC0D33022AAF7E0F00338DDF /* SignUpView.swift in Sources */,
 				AC0D32FD2AAF795400338DDF /* TextFieldModifier.swift in Sources */,
+				AC0D330E2AAF804300338DDF /* PrimaryTextField.swift in Sources */,
 				ACAD4E8A2AAF5D1600EDD02F /* SplashView.swift in Sources */,
+				AC0D33082AAF7E7900338DDF /* LogoImageView.swift in Sources */,
+				AC0D33042AAF7E1C00338DDF /* SignUpViewModel.swift in Sources */,
 				ACAD4E882AAF5D1600EDD02F /* MessengerAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

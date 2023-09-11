@@ -9,7 +9,7 @@
 
 // Login Screen
 
-"login_enter_your_email" = "ادخل حسابك";
+"login_enter_your_email" = "ادخل البريد الالكترونى";
 "login_enter_your_password" = "ادخل كلمة السر";
 "login_forget_password" = "هل نسيت كلمة السر؟";
 "login_login_button_title" = "تسجيل";
@@ -17,3 +17,10 @@
 "login_continue_with_facebook" = "تسجيل عبر الفيسبوك";
 "login_do_not_have_account" = "هل ليس لديك حساب شخصى؟";
 "login_sign_up_button_title" = "انشاء حساب";
+
+
+// SignUp Screen
+
+"sign_up_enter_user_name" = "ادخل اسمك بالكامل ";
+"sign_up_already_have_an_account" = "هل بالفعل لديك حساب؟";
+"sign_up_sign_in_button_title" = "تسجيل البيانات";

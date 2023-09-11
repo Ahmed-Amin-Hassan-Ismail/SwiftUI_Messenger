@@ -13,7 +13,7 @@ struct TextFieldModifier: ViewModifier {
         content
             .font(.subheadline)
             .fontWeight(.semibold)
-            .padding(12)
+            .padding(15)
             .background(Color(.systemGray6))
             .cornerRadius(10)
     }
