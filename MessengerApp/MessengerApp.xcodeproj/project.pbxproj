@@ -22,6 +22,8 @@
 		AC0D33192AAF8BC000338DDF /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0D33182AAF8BC000338DDF /* HomeViewModel.swift */; };
 		AC0D331B2AAF8E6200338DDF /* ActiveNowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0D331A2AAF8E6200338DDF /* ActiveNowView.swift */; };
 		AC0D331D2AAF90E400338DDF /* ChatRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0D331C2AAF90E400338DDF /* ChatRowView.swift */; };
+		AC0D33252AAF968C00338DDF /* NewMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0D33242AAF968C00338DDF /* NewMessageView.swift */; };
+		AC0D33282AAF987300338DDF /* NewMessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0D33272AAF987300338DDF /* NewMessageViewModel.swift */; };
 		ACAD4E882AAF5D1600EDD02F /* MessengerAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAD4E872AAF5D1600EDD02F /* MessengerAppApp.swift */; };
 		ACAD4E8A2AAF5D1600EDD02F /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAD4E892AAF5D1600EDD02F /* SplashView.swift */; };
 		ACAD4E8C2AAF5D1700EDD02F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACAD4E8B2AAF5D1700EDD02F /* Assets.xcassets */; };
@@ -49,6 +51,8 @@
 		AC0D33182AAF8BC000338DDF /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		AC0D331A2AAF8E6200338DDF /* ActiveNowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveNowView.swift; sourceTree = "<group>"; };
 		AC0D331C2AAF90E400338DDF /* ChatRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRowView.swift; sourceTree = "<group>"; };
+		AC0D33242AAF968C00338DDF /* NewMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageView.swift; sourceTree = "<group>"; };
+		AC0D33272AAF987300338DDF /* NewMessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageViewModel.swift; sourceTree = "<group>"; };
 		ACAD4E842AAF5D1600EDD02F /* MessengerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessengerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACAD4E872AAF5D1600EDD02F /* MessengerAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessengerAppApp.swift; sourceTree = "<group>"; };
 		ACAD4E892AAF5D1600EDD02F /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
@@ -207,6 +211,31 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		AC0D33222AAF967E00338DDF /* NewMessage */ = {
+			isa = PBXGroup;
+			children = (
+				AC0D33262AAF986800338DDF /* ViewModel */,
+				AC0D33232AAF968200338DDF /* View */,
+			);
+			path = NewMessage;
+			sourceTree = "<group>";
+		};
+		AC0D33232AAF968200338DDF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AC0D33242AAF968C00338DDF /* NewMessageView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AC0D33262AAF986800338DDF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AC0D33272AAF987300338DDF /* NewMessageViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		ACAD4E7B2AAF5D1600EDD02F = {
 			isa = PBXGroup;
 			children = (
@@ -268,6 +297,7 @@
 		ACAD4E972AAF5D5C00EDD02F /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				AC0D33222AAF967E00338DDF /* NewMessage */,
 				AC0D33122AAF8BA400338DDF /* Home */,
 				AC0D32FE2AAF7DF900338DDF /* SignUp */,
 				ACAD4E9A2AAF5D7500EDD02F /* Login */,
@@ -413,6 +443,7 @@
 			files = (
 				AC0D32EF2AAF6D7C00338DDF /* String + EXT.swift in Sources */,
 				ACAD4EA92AAF625500EDD02F /* LottieAnimationView.swift in Sources */,
+				AC0D33252AAF968C00338DDF /* NewMessageView.swift in Sources */,
 				AC0D331B2AAF8E6200338DDF /* ActiveNowView.swift in Sources */,
 				ACAD4E9E2AAF5DCC00EDD02F /* LoginView.swift in Sources */,
 				AC0D33192AAF8BC000338DDF /* HomeViewModel.swift in Sources */,
@@ -429,6 +460,7 @@
 				AC0D331D2AAF90E400338DDF /* ChatRowView.swift in Sources */,
 				AC0D33042AAF7E1C00338DDF /* SignUpViewModel.swift in Sources */,
 				ACAD4E882AAF5D1600EDD02F /* MessengerAppApp.swift in Sources */,
+				AC0D33282AAF987300338DDF /* NewMessageViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

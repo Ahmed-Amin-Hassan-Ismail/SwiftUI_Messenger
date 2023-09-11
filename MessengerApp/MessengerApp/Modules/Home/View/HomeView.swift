@@ -11,6 +11,8 @@ struct HomeView: View {
     
     // MARK: - Properties
     
+    @StateObject private var viewModel = HomeViewModel()
+    
     
     // MARK: - Body
     
@@ -27,9 +29,9 @@ struct HomeView: View {
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) { profileView }
-                ToolbarItem(placement: .navigationBarTrailing) { newChatView }
+                ToolbarItem(placement: .navigationBarTrailing) { newMessageView }
             }
-            
+            .fullScreenCover(isPresented: $viewModel.showNewMessageView, content: { NewMessageView() })
         }
     }
 }
@@ -54,9 +56,11 @@ extension HomeView {
         }
     }
     
-    private var newChatView: some View {
+    private var newMessageView: some View {
         
         Button {
+            
+            viewModel.showNewMessageView.toggle()
             
         } label: {
             Image(systemName: "square.and.pencil.circle.fill")
