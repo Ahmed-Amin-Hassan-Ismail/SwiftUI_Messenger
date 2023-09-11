@@ -26,3 +26,12 @@
 "sign_up_sign_in_button_title" = "Sign In";
 
 
+// Home Screen
+
+"home_chat_title" = "Chats";
+
+// New Message Screen
+
+"new_message_title" = "New Message";
+"new_message_to_search" = "To: ";
+"new_message_contacts" = "CONTACTS";

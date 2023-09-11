@@ -19,28 +19,27 @@ struct NewMessageView: View {
     var body: some View {
         NavigationStack {
             VStack(spacing: 0) {
-                        PrimaryTextField(textFieldInput: $viewModel.searchText, title: "To: ", isSecured: false)
-                     
-                        List {
-                            Section {
-                                ForEach(0...4, id: \.self) { _ in
-                                    newUsers
-                                }
-                            } header: {
-                                Text("Contacts".uppercased())
-                                    .font(.subheadline)
-                                    .foregroundColor(.gray)
-                                    .padding(.bottom, 10)
-                            }
+                PrimaryTextField(textFieldInput: $viewModel.searchText, title: "new_message_to_search".localized, isSecured: false)
+                
+                List {
+                    Section {
+                        ForEach(0...4, id: \.self) { _ in
+                            newUsers
                         }
-                    
-                        .listStyle(.plain)
+                    } header: {
+                        Text("new_message_contacts".localized)
+                            .font(.subheadline)
+                            .foregroundColor(.gray)
+                            .padding(.bottom, 10)
                     }
-                .navigationTitle("New Message")
-                .navigationBarTitleDisplayMode(.inline)
-                .toolbar {
-                    ToolbarItem(placement: .navigationBarLeading) { cancelButton }
                 }
+                .listStyle(.plain)
+            }
+            .navigationTitle("new_message_title".localized)
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) { cancelButton }
+            }
         }
     }
 }
@@ -61,7 +60,7 @@ extension NewMessageView {
             Text("Ahmed Amin")
                 .font(.headline)
                 .fontWeight(.semibold)
-                
+            
         }
     }
     
@@ -76,12 +75,12 @@ extension NewMessageView {
                 .font(.headline)
                 .foregroundColor(.black)
         }
-
+        
     }
 }
 
 struct NewMessageView_Previews: PreviewProvider {
     static var previews: some View {
-            NewMessageView()
+        NewMessageView()
     }
 }

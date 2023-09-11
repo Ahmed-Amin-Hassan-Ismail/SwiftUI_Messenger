@@ -50,7 +50,7 @@ extension HomeView {
                 .clipShape(Circle())
             
             
-            Text("Chats")
+            Text("home_chat_title".localized)
                 .font(.title)
                 .fontWeight(.bold)
         }

@@ -24,3 +24,14 @@
 "sign_up_enter_user_name" = "ادخل اسمك بالكامل ";
 "sign_up_already_have_an_account" = "هل بالفعل لديك حساب؟";
 "sign_up_sign_in_button_title" = "تسجيل البيانات";
+
+
+// Home Screen
+
+"home_chat_title" = "الدردشات";
+
+// New Message Screen
+
+"new_message_title" = "رسالة جديدة";
+"new_message_to_search" = "الى: ";
+"new_message_contacts" = "قائمة الاصدقاء";
