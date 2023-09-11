@@ -19,7 +19,8 @@ struct HomeView: View {
         NavigationStack {
             
             ScrollView {
-                
+               ActiveNowView()
+                    .padding(.top, 20)
                 
             }
             .toolbar {
@@ -40,7 +41,7 @@ extension HomeView {
             Image.userProfile
                 .resizable()
                 .aspectRatio(contentMode: .fill)
-                .frame(width: 50, height: 50)
+                .frame(width: 40, height: 40)
                 .clipShape(Circle())
             
             

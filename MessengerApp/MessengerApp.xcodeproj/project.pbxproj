@@ -20,6 +20,7 @@
 		AC0D33112AAF81AE00338DDF /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0D33102AAF81AE00338DDF /* PrimaryButton.swift */; };
 		AC0D33152AAF8BAE00338DDF /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0D33142AAF8BAE00338DDF /* HomeView.swift */; };
 		AC0D33192AAF8BC000338DDF /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0D33182AAF8BC000338DDF /* HomeViewModel.swift */; };
+		AC0D331B2AAF8E6200338DDF /* ActiveNowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0D331A2AAF8E6200338DDF /* ActiveNowView.swift */; };
 		ACAD4E882AAF5D1600EDD02F /* MessengerAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAD4E872AAF5D1600EDD02F /* MessengerAppApp.swift */; };
 		ACAD4E8A2AAF5D1600EDD02F /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAD4E892AAF5D1600EDD02F /* SplashView.swift */; };
 		ACAD4E8C2AAF5D1700EDD02F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACAD4E8B2AAF5D1700EDD02F /* Assets.xcassets */; };
@@ -45,6 +46,7 @@
 		AC0D33102AAF81AE00338DDF /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		AC0D33142AAF8BAE00338DDF /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		AC0D33182AAF8BC000338DDF /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		AC0D331A2AAF8E6200338DDF /* ActiveNowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveNowView.swift; sourceTree = "<group>"; };
 		ACAD4E842AAF5D1600EDD02F /* MessengerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessengerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACAD4E872AAF5D1600EDD02F /* MessengerAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessengerAppApp.swift; sourceTree = "<group>"; };
 		ACAD4E892AAF5D1600EDD02F /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				AC0D33142AAF8BAE00338DDF /* HomeView.swift */,
+				AC0D331A2AAF8E6200338DDF /* ActiveNowView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -407,6 +410,7 @@
 			files = (
 				AC0D32EF2AAF6D7C00338DDF /* String + EXT.swift in Sources */,
 				ACAD4EA92AAF625500EDD02F /* LottieAnimationView.swift in Sources */,
+				AC0D331B2AAF8E6200338DDF /* ActiveNowView.swift in Sources */,
 				ACAD4E9E2AAF5DCC00EDD02F /* LoginView.swift in Sources */,
 				AC0D33192AAF8BC000338DDF /* HomeViewModel.swift in Sources */,
 				AC0D33152AAF8BAE00338DDF /* HomeView.swift in Sources */,
