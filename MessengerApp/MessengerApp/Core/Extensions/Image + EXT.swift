@@ -13,4 +13,7 @@ extension Image {
     static let logo = Image("logo")
     static let facebook = Image("facebook")
     static let userProfile = Image("userProfile")
+    
+    // system image
+    static let profilePlaceholder = Image(systemName: "person.circle.fill")
 }

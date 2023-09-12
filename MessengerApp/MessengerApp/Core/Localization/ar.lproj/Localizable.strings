@@ -35,3 +35,11 @@
 "new_message_title" = "رسالة جديدة";
 "new_message_to_search" = "الى: ";
 "new_message_contacts" = "قائمة الاصدقاء";
+
+// Profile Screen
+
+"profile_dark_mode" = "حالة العتامة";
+"profile_activity_status" = "حالة النشاط";
+"profile_accessibility" = "المسهلات";
+"profile_privacy" = "الامان";
+"profile_notifications" = "الاشعارات";

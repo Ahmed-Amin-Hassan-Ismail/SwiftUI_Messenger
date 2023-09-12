@@ -13,5 +13,11 @@ final class HomeViewModel: ObservableObject {
     // MARK: - Properties
     
     @Published var showNewMessageView: Bool = false
-    @Published var showProfileView: Bool = false
+    @Published var user: User?
+    
+    
+    init() {
+        
+        self.user = DeveloperPreview.instance.user
+    }
 }

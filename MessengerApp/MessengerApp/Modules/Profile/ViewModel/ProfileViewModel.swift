@@ -15,8 +15,9 @@ final class ProfileViewModel: ObservableObject {
     // MARK: - Properties
     
     @Published var settingsOptions = SettingOptions.allCases
+    @Published var user: User?
     @Published var selectedPhoto: PhotosPickerItem?
-    @Published var profileImage: Image?
+    @Published var selectedProfileImage: Image?
     
     
     private var cancellables = Set<AnyCancellable>()
@@ -24,9 +25,10 @@ final class ProfileViewModel: ObservableObject {
     
     // MARK: - Methods
     
-    init() {
+    init(user: User?) {
         
-            addPhotoSubscriber()
+        self.user = user
+        addPhotoSubscriber()
     }
     
     private func addPhotoSubscriber() {
@@ -39,13 +41,14 @@ final class ProfileViewModel: ObservableObject {
             }
             .store(in: &cancellables)
     }
-    
+  
+    @MainActor
     private func loadUserImage(item: PhotosPickerItem?) async throws {
         guard let item = item else { return }
         guard let imageData = try await item.loadTransferable(type: Data.self) else { return }
         guard let uiImage = UIImage(data: imageData) else { return }
         
-        self.profileImage = Image(uiImage: uiImage)
+        self.selectedProfileImage = Image(uiImage: uiImage)
     }
     
     func didTapOnLogout() {

@@ -43,3 +43,18 @@ struct PrimaryTextField_Previews: PreviewProvider {
         PrimaryTextField(textFieldInput: .constant(""), title: "Enter Your Email", isSecured: false)
     }
 }
+
+ // Text field Modifier
+
+struct TextFieldModifier: ViewModifier {
+    
+    func body(content: Content) -> some View {
+        content
+            .font(.subheadline)
+            .fontWeight(.semibold)
+            .padding(15)
+            .background(Color(.systemGray6))
+            .cornerRadius(10)
+    }
+}
+

@@ -32,11 +32,7 @@ extension ActiveNowView {
     private var activeView: some View {
         
         VStack {
-            Image.userProfile
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: 65, height: 65)
-                .clipShape(Circle())
+            CircularImageView(user: DeveloperPreview.instance.user, imageSize: .large)
                 .overlay(
                     ZStack {
                         Circle()

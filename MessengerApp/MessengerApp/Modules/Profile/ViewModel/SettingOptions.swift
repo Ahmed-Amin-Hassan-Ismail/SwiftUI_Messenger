@@ -20,15 +20,15 @@ enum SettingOptions: Int, CaseIterable, Identifiable {
     var title: String {
         switch self {
         case .darkMode:
-            return "Dark Mode"
+            return "profile_dark_mode".localized
         case .activeStatus:
-            return "Active Status"
+            return "profile_activity_status".localized
         case .accessibility:
-            return "Accessibility"
+            return "profile_accessibility".localized
         case .privacy:
-            return "Privacy"
+            return "profile_privacy".localized
         case .notifications:
-            return "Notifications"
+            return "profile_notifications".localized
         }
     }
     

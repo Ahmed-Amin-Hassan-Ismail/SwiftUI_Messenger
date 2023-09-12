@@ -51,11 +51,7 @@ extension NewMessageView {
     private var newUsers: some View {
         
         HStack {
-            Image.userProfile
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: 65, height: 65)
-                .clipShape(Circle())
+            CircularImageView(user: DeveloperPreview.instance.user, imageSize: .large)
             
             Text("Ahmed Amin")
                 .font(.headline)

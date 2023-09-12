@@ -13,7 +13,12 @@ struct ProfileView: View {
     
     // MARK: - Properties
     
-    @StateObject private var viewModel = ProfileViewModel()
+    @StateObject private var viewModel: ProfileViewModel
+    
+    init(user: User) {
+        
+        _viewModel = StateObject(wrappedValue: ProfileViewModel(user: user))
+    }
     
     // MARK: - Body
     
@@ -26,7 +31,7 @@ struct ProfileView: View {
             settingSection
             
         }
-        .padding(.top, 60)
+        .padding(.top, 50)
     }
 }
 
@@ -39,10 +44,28 @@ extension ProfileView {
         VStack {
             
             PhotosPicker(selection: $viewModel.selectedPhoto) {
-                setProfileImage(image: viewModel.profileImage ?? Image(systemName: "person.circle.fill"))
+                
+                if let imagePicker = viewModel.selectedProfileImage {
+                    setProfileImage(image: imagePicker)
+                } else {
+                    CircularImageView(user: viewModel.user, imageSize: .xLarge)
+                        .overlay(
+                            ZStack {
+                                Circle()
+                                    .fill(Color.white)
+                                    .frame(width: 25, height: 25)
+
+                                Image(systemName: "camera.fill")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 18, height: 18)
+                                    .foregroundColor(.black)
+                            }
+                            ,alignment: .bottomTrailing)
+                }
             }
             
-            Text("Ahmed Amin")
+            Text(viewModel.user?.fullname ?? "")
                 .font(.title2)
                 .fontWeight(.semibold)
         }
@@ -119,6 +142,6 @@ extension ProfileView {
 
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView()
+        ProfileView(user: dev.user)
     }
 }

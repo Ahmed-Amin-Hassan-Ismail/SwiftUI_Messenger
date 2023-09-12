@@ -31,6 +31,9 @@ struct HomeView: View {
                 ToolbarItem(placement: .navigationBarLeading) { profileView }
                 ToolbarItem(placement: .navigationBarTrailing) { newMessageView }
             }
+            .navigationDestination(for: User.self, destination: { user in
+                ProfileView(user: user)
+            })
             .fullScreenCover(isPresented: $viewModel.showNewMessageView, content: { NewMessageView() })
         }
     }
@@ -43,15 +46,10 @@ extension HomeView {
     
     private var profileView: some View {
         HStack {
-            Image.userProfile
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: 40, height: 40)
-                .clipShape(Circle())
-                .onTapGesture {
-                    
-                    viewModel.showProfileView.toggle()
-                }
+            NavigationLink(value: viewModel.user) {
+                
+                CircularImageView(user: viewModel.user, imageSize: .small)
+            }
             
             Text("home_chat_title".localized)
                 .font(.title)

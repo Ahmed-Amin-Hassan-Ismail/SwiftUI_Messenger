@@ -35,3 +35,11 @@
 "new_message_title" = "New Message";
 "new_message_to_search" = "To: ";
 "new_message_contacts" = "CONTACTS";
+
+// Profile Screen
+
+"profile_dark_mode" = "Dark Mode";
+"profile_activity_status" = "Active Status";
+"profile_accessibility" = "Accessibility";
+"profile_privacy" = "Privacy";
+"profile_notifications" = "Notifications";
