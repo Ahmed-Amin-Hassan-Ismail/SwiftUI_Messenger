@@ -12,8 +12,8 @@ struct MessengerAppApp: App {
     
     // MARK: - Properties
     
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delefate
     @State private var shouldShowLoginScreen: Bool = false
-    
     
     var body: some Scene {
         WindowGroup {
