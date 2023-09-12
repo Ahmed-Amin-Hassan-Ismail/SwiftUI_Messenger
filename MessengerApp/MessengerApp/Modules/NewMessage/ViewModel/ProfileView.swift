@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import PhotosUI
+
 
 struct ProfileView: View {
     
@@ -35,23 +37,10 @@ extension ProfileView {
     private var imageProfileView: some View {
         
         VStack {
-            Image.userProfile
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: 100, height: 100)
-                .clipShape(Circle())
-                .overlay(
-                    ZStack {
-                        Circle()
-                            .fill(Color.white)
-                            .frame(width: 25, height: 25)
-                        
-                        Image(systemName: "camera.fill")
-                            .resizable()
-                            .frame(width: 20, height: 20)
-                            
-                    }
-                    ,alignment: .bottomTrailing)
+            
+            PhotosPicker(selection: $viewModel.selectedPhoto) {
+                setProfileImage(image: viewModel.profileImage ?? Image(systemName: "person.circle.fill"))
+            }
             
             Text("Ahmed Amin")
                 .font(.title2)
@@ -59,6 +48,29 @@ extension ProfileView {
         }
     }
     
+    private func setProfileImage(image: Image) -> some View {
+        
+        image
+            .resizable()
+            .aspectRatio(contentMode: .fill)
+            .frame(width: 100, height: 100)
+            .foregroundColor(.gray)
+            .clipShape(Circle())
+            .overlay(
+                ZStack {
+                    Circle()
+                        .fill(Color.white)
+                        .frame(width: 25, height: 25)
+                    
+                    Image(systemName: "camera.fill")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 18, height: 18)
+                        .foregroundColor(.black)
+                }
+                ,alignment: .bottomTrailing)
+        
+    }
     
     private var settingSection: some View {
         List {
