@@ -29,12 +29,12 @@ final class FirebaseManager {
         
     }
     
-    func login(email: String, password: String) async throws -> AuthDataResult {
+    func login(email: String, password: String) async throws {
         
        try await Auth.auth().signIn(withEmail: email, password: password)
     }
     
-    func createUser(email: String, fullname: String, password: String) async throws -> AuthDataResult {
+    func createUser(email: String, fullname: String, password: String) async throws {
         
      try await Auth.auth().createUser(withEmail: email, password: password)
     }

@@ -15,7 +15,7 @@ struct ProfileView: View {
     
     @StateObject private var viewModel: ProfileViewModel
     
-    init(user: User) {
+    init(user: UserModel) {
         
         _viewModel = StateObject(wrappedValue: ProfileViewModel(user: user))
     }
@@ -32,6 +32,9 @@ struct ProfileView: View {
             
         }
         .padding(.top, 50)
+        .fullScreenCover(isPresented: $viewModel.shouldShowLoginView) {
+            LoginView()
+        }
     }
 }
 
@@ -122,6 +125,7 @@ extension ProfileView {
             viewModel.didTapOnLogout()
             
         } label: {
+            
             Text("Log out")
         }
     }

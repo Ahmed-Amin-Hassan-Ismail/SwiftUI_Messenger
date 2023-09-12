@@ -31,7 +31,7 @@ struct HomeView: View {
                 ToolbarItem(placement: .navigationBarLeading) { profileView }
                 ToolbarItem(placement: .navigationBarTrailing) { newMessageView }
             }
-            .navigationDestination(for: User.self, destination: { user in
+            .navigationDestination(for: UserModel.self, destination: { user in
                 ProfileView(user: user)
             })
             .fullScreenCover(isPresented: $viewModel.showNewMessageView, content: { NewMessageView() })

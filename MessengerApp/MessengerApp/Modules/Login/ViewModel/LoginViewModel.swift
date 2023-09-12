@@ -19,6 +19,9 @@ final class LoginViewModel: ObservableObject {
     /// logo animation
     @Published var isLogoAppeared: Bool = false
     
+    /// showHomeView
+    @Published var shouldShowHomeView: Bool = false
+    
     private lazy var service = LoginService()
     
     
@@ -30,12 +33,12 @@ final class LoginViewModel: ObservableObject {
         
     }
     
+    @MainActor
     func didTapOnLoginButton() {
         
         Task {
-            try await service.login(withEmail: email, password: password)
+            self.shouldShowHomeView = try await service.login(withEmail: email, password: password)
         }
-        
     }
     
     func didTapOnLoginWithFacebook() {

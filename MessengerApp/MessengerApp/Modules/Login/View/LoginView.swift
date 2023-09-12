@@ -53,6 +53,10 @@ struct LoginView: View {
                 
             }
             .padding()
+            .navigationDestination(isPresented: $viewModel.shouldShowHomeView, destination: {
+                HomeView()
+                    .navigationBarBackButtonHidden()
+            })
             .onAppear {
                 viewModel.isLogoAppeared = true
             }

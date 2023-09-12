@@ -44,7 +44,7 @@
 		AC9E8F9C2AB085130046D19A /* SettingRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9E8F9B2AB085130046D19A /* SettingRowView.swift */; };
 		AC9E8F9E2AB086680046D19A /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9E8F9D2AB086680046D19A /* ProfileViewModel.swift */; };
 		AC9E8FA02AB088800046D19A /* SettingOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9E8F9F2AB088800046D19A /* SettingOptions.swift */; };
-		AC9E8FA22AB0990B0046D19A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9E8FA12AB0990B0046D19A /* User.swift */; };
+		AC9E8FA22AB0990B0046D19A /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9E8FA12AB0990B0046D19A /* UserModel.swift */; };
 		AC9E8FA62AB09A3A0046D19A /* PreviewProvider + EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9E8FA52AB09A3A0046D19A /* PreviewProvider + EXT.swift */; };
 		ACAD4E882AAF5D1600EDD02F /* MessengerAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAD4E872AAF5D1600EDD02F /* MessengerAppApp.swift */; };
 		ACAD4E8A2AAF5D1600EDD02F /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAD4E892AAF5D1600EDD02F /* SplashView.swift */; };
@@ -91,7 +91,7 @@
 		AC9E8F9B2AB085130046D19A /* SettingRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRowView.swift; sourceTree = "<group>"; };
 		AC9E8F9D2AB086680046D19A /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		AC9E8F9F2AB088800046D19A /* SettingOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingOptions.swift; sourceTree = "<group>"; };
-		AC9E8FA12AB0990B0046D19A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		AC9E8FA12AB0990B0046D19A /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		AC9E8FA52AB09A3A0046D19A /* PreviewProvider + EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PreviewProvider + EXT.swift"; sourceTree = "<group>"; };
 		ACAD4E842AAF5D1600EDD02F /* MessengerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessengerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACAD4E872AAF5D1600EDD02F /* MessengerAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessengerAppApp.swift; sourceTree = "<group>"; };
@@ -454,7 +454,7 @@
 		ACAD4E982AAF5D5F00EDD02F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				AC9E8FA12AB0990B0046D19A /* User.swift */,
+				AC9E8FA12AB0990B0046D19A /* UserModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -595,7 +595,7 @@
 				AC0948FC2AB0B22C00CA2754 /* ProfileImageSize.swift in Sources */,
 				AC9E8F9C2AB085130046D19A /* SettingRowView.swift in Sources */,
 				AC0949012AB0B5AA00CA2754 /* ChatView.swift in Sources */,
-				AC9E8FA22AB0990B0046D19A /* User.swift in Sources */,
+				AC9E8FA22AB0990B0046D19A /* UserModel.swift in Sources */,
 				AC0949052AB0BA2B00CA2754 /* ChatMessageRow.swift in Sources */,
 				AC0D33252AAF968C00338DDF /* NewMessageView.swift in Sources */,
 				AC0949202AB0CE4500CA2754 /* ErrorHandling.swift in Sources */,

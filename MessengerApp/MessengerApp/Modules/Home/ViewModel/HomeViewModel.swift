@@ -13,7 +13,7 @@ final class HomeViewModel: ObservableObject {
     // MARK: - Properties
     
     @Published var showNewMessageView: Bool = false
-    @Published var user: User?
+    @Published var user: UserModel?
     
     
     init() {

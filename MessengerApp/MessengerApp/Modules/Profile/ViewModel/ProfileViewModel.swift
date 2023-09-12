@@ -15,10 +15,12 @@ final class ProfileViewModel: ObservableObject {
     // MARK: - Properties
     
     @Published var settingsOptions = SettingOptions.allCases
-    @Published var user: User?
+    @Published var user: UserModel?
     @Published var selectedPhoto: PhotosPickerItem?
     @Published var selectedProfileImage: Image?
     
+    /// login view
+    @Published var shouldShowLoginView: Bool = false
     
     private lazy var service = ProfileService()
     private var cancellables = Set<AnyCancellable>()
@@ -26,7 +28,7 @@ final class ProfileViewModel: ObservableObject {
     
     // MARK: - Methods
     
-    init(user: User?) {
+    init(user: UserModel?) {
         
         self.user = user
         addPhotoSubscriber()
@@ -54,7 +56,7 @@ final class ProfileViewModel: ObservableObject {
     
     func didTapOnLogout() {
         
-        service.logout()
+        self.shouldShowLoginView = service.logout()
     }
     
     func didTapOnDeleteAccount() {

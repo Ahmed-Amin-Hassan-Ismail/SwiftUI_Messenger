@@ -14,7 +14,7 @@ enum ErrorHandling: LocalizedError {
     case unknown
     case catchError
     
-    var errorDescription: String? {
+    var errorDescription: String {
         switch self {
         case .badURLResponse(let url):
             return "[🔥] Bad response from URL: \(url)"
