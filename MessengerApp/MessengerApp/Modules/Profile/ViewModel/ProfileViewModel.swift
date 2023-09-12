@@ -20,6 +20,7 @@ final class ProfileViewModel: ObservableObject {
     @Published var selectedProfileImage: Image?
     
     
+    private lazy var service = ProfileService()
     private var cancellables = Set<AnyCancellable>()
     
     
@@ -52,7 +53,8 @@ final class ProfileViewModel: ObservableObject {
     }
     
     func didTapOnLogout() {
-        /// not implemented yet
+        
+        service.logout()
     }
     
     func didTapOnDeleteAccount() {

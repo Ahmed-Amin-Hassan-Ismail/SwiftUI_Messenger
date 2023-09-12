@@ -23,6 +23,12 @@ final class FirebaseManager {
         FirebaseApp.configure()
     }
     
+    func isUserHasLoggedBefore() -> Bool {
+        
+        (Auth.auth().currentUser != nil)
+        
+    }
+    
     func login(email: String, password: String) async throws -> AuthDataResult {
         
        try await Auth.auth().signIn(withEmail: email, password: password)
@@ -31,5 +37,11 @@ final class FirebaseManager {
     func createUser(email: String, fullname: String, password: String) async throws -> AuthDataResult {
         
      try await Auth.auth().createUser(withEmail: email, password: password)
+    }
+    
+    func logout() throws {
+                
+        try Auth.auth().signOut()
+        
     }
 }

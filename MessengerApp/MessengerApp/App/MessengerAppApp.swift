@@ -21,8 +21,13 @@ struct MessengerAppApp: App {
                 
                 if shouldShowLoginScreen {
                     
-                    LoginView()
-                        .zIndex(0)
+                    if FirebaseManager.shared.isUserHasLoggedBefore() {
+                        HomeView()
+                            .zIndex(0)
+                    } else {
+                        LoginView()
+                            .zIndex(0)
+                    }                                            
                     
                 } else {
                     
