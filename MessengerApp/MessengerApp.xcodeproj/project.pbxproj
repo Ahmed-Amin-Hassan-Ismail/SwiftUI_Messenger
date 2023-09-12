@@ -20,6 +20,9 @@
 		AC0949122AB0C87F00CA2754 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = AC0949112AB0C87F00CA2754 /* FirebaseStorage */; };
 		AC0949142AB0C8AC00CA2754 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0949132AB0C8AC00CA2754 /* FirebaseManager.swift */; };
 		AC0949162AB0C8EB00CA2754 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0949152AB0C8EB00CA2754 /* AppDelegate.swift */; };
+		AC0949192AB0CAFA00CA2754 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0949182AB0CAFA00CA2754 /* LoginService.swift */; };
+		AC09491C2AB0CBBF00CA2754 /* SignUpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC09491B2AB0CBBF00CA2754 /* SignUpService.swift */; };
+		AC0949202AB0CE4500CA2754 /* ErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC09491F2AB0CE4500CA2754 /* ErrorHandling.swift */; };
 		AC0D32E92AAF6BC500338DDF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AC0D32EB2AAF6BC500338DDF /* Localizable.strings */; };
 		AC0D32EF2AAF6D7C00338DDF /* String + EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0D32EE2AAF6D7C00338DDF /* String + EXT.swift */; };
 		AC0D32F32AAF704900338DDF /* LanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0D32F22AAF704900338DDF /* LanguageManager.swift */; };
@@ -62,6 +65,9 @@
 		AC0949082AB0C63700CA2754 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AC0949132AB0C8AC00CA2754 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		AC0949152AB0C8EB00CA2754 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AC0949182AB0CAFA00CA2754 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		AC09491B2AB0CBBF00CA2754 /* SignUpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpService.swift; sourceTree = "<group>"; };
+		AC09491F2AB0CE4500CA2754 /* ErrorHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandling.swift; sourceTree = "<group>"; };
 		AC0D32EA2AAF6BC500338DDF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AC0D32EC2AAF6C0200338DDF /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AC0D32EE2AAF6D7C00338DDF /* String + EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + EXT.swift"; sourceTree = "<group>"; };
@@ -147,6 +153,37 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		AC0949172AB0CA4400CA2754 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				AC0949182AB0CAFA00CA2754 /* LoginService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		AC09491A2AB0CBAF00CA2754 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				AC09491B2AB0CBBF00CA2754 /* SignUpService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		AC09491D2AB0CE1900CA2754 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		AC09491E2AB0CE3900CA2754 /* ErrorHandling */ = {
+			isa = PBXGroup;
+			children = (
+				AC09491F2AB0CE4500CA2754 /* ErrorHandling.swift */,
+			);
+			path = ErrorHandling;
+			sourceTree = "<group>";
+		};
 		AC0D32E62AAF6BB100338DDF /* Localization */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,6 +240,7 @@
 		AC0D32FE2AAF7DF900338DDF /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
+				AC09491A2AB0CBAF00CA2754 /* Service */,
 				AC0D33002AAF7E0500338DDF /* ViewModel */,
 				AC0D32FF2AAF7E0200338DDF /* View */,
 			);
@@ -350,7 +388,6 @@
 				ACAD4E952AAF5D4800EDD02F /* App */,
 				ACAD4EA52AAF61FD00EDD02F /* Utilis */,
 				ACAD4E962AAF5D5000EDD02F /* Core */,
-				ACAD4E992AAF5D6700EDD02F /* Services */,
 				ACAD4E982AAF5D5F00EDD02F /* Model */,
 				AC0D32FA2AAF792F00338DDF /* Components */,
 				ACAD4E972AAF5D5C00EDD02F /* Modules */,
@@ -380,6 +417,8 @@
 		ACAD4E962AAF5D5000EDD02F /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				AC09491E2AB0CE3900CA2754 /* ErrorHandling */,
+				AC09491D2AB0CE1900CA2754 /* Network */,
 				AC0D32F12AAF703F00338DDF /* LanguageManager */,
 				AC0D32E62AAF6BB100338DDF /* Localization */,
 				AC0D32F02AAF6F2900338DDF /* Extensions */,
@@ -409,16 +448,10 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		ACAD4E992AAF5D6700EDD02F /* Services */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
 		ACAD4E9A2AAF5D7500EDD02F /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				AC0949172AB0CA4400CA2754 /* Service */,
 				AC0D32F72AAF728600338DDF /* ViewModel */,
 				AC0D32F62AAF727E00338DDF /* View */,
 			);
@@ -554,6 +587,7 @@
 				AC9E8FA22AB0990B0046D19A /* User.swift in Sources */,
 				AC0949052AB0BA2B00CA2754 /* ChatMessageRow.swift in Sources */,
 				AC0D33252AAF968C00338DDF /* NewMessageView.swift in Sources */,
+				AC0949202AB0CE4500CA2754 /* ErrorHandling.swift in Sources */,
 				AC0948FA2AB0B20C00CA2754 /* CircularImageView.swift in Sources */,
 				AC0D331B2AAF8E6200338DDF /* ActiveNowView.swift in Sources */,
 				AC0949032AB0B62900CA2754 /* ChatViewModel.swift in Sources */,
@@ -561,7 +595,9 @@
 				AC0949142AB0C8AC00CA2754 /* FirebaseManager.swift in Sources */,
 				AC0D33192AAF8BC000338DDF /* HomeViewModel.swift in Sources */,
 				AC0D33152AAF8BAE00338DDF /* HomeView.swift in Sources */,
+				AC09491C2AB0CBBF00CA2754 /* SignUpService.swift in Sources */,
 				AC0D32F52AAF71EF00338DDF /* Image + EXT.swift in Sources */,
+				AC0949192AB0CAFA00CA2754 /* LoginService.swift in Sources */,
 				AC9E8FA02AB088800046D19A /* SettingOptions.swift in Sources */,
 				AC0D33112AAF81AE00338DDF /* PrimaryButton.swift in Sources */,
 				AC0D32F92AAF729600338DDF /* LoginViewModel.swift in Sources */,

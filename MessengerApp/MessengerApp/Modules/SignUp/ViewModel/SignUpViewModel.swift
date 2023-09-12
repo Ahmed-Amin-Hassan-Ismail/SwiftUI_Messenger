@@ -20,12 +20,17 @@ final class SignUpViewModel: ObservableObject {
     /// logo animation
     @Published var isLogoAppeared: Bool = false
     
+    private lazy var service = SignUpService()
+    
     
     // MARK: - Methods
     
     func didTapOnSignUp() {
         
-        /// not implemented yet
+        Task {
+            
+            try await service.createUser(withEmail:email, fullname: username, password: password)
+        }
         
     }
 }

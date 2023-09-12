@@ -19,6 +19,8 @@ final class LoginViewModel: ObservableObject {
     /// logo animation
     @Published var isLogoAppeared: Bool = false
     
+    private lazy var service = LoginService()
+    
     
     // MARK: - Methods
     
@@ -30,7 +32,9 @@ final class LoginViewModel: ObservableObject {
     
     func didTapOnLoginButton() {
         
-        /// not implemented yet
+        Task {
+            try await service.login(withEmail: email, password: password)
+        }
         
     }
     
