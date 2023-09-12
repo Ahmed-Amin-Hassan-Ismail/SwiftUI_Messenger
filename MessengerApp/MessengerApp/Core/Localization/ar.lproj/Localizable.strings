@@ -43,3 +43,10 @@
 "profile_accessibility" = "المسهلات";
 "profile_privacy" = "الامان";
 "profile_notifications" = "الاشعارات";
+
+
+// Chat Screen
+
+"chat_messenger_title" = "الدردشة";
+"chat_meesege_text" = "اكتب رسالة...";
+"chat_send_title_button" = "ارسال";

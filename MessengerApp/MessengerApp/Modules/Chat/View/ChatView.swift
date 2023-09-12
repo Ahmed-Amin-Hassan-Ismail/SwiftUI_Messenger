@@ -51,7 +51,7 @@ extension ChatView {
                 .font(.title3)
                 .fontWeight(.semibold)
             
-            Text("Messenger")
+            Text("chat_messenger_title".localized)
                 .font(.footnote)
                 .foregroundColor(.gray)
         }
@@ -60,7 +60,7 @@ extension ChatView {
     private var sendMessageTextFieldView: some View {
         
         ZStack(alignment: .trailing) {
-            TextField("Message...", text: $viewModel.messageText, axis: .vertical)
+            TextField("chat_meesege_text".localized, text: $viewModel.messageText, axis: .vertical)
                 .font(.subheadline)
                 .padding(12)
                 .padding(.trailing, 48)
@@ -69,7 +69,7 @@ extension ChatView {
             Button {
                 viewModel.didTapOnSend()
             } label: {
-                Text("Send")
+                Text("chat_send_title_button".localized)
                     .font(.headline)
                     .fontWeight(.semibold)
             }
