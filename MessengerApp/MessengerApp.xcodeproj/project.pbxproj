@@ -24,6 +24,10 @@
 		AC0D331D2AAF90E400338DDF /* ChatRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0D331C2AAF90E400338DDF /* ChatRowView.swift */; };
 		AC0D33252AAF968C00338DDF /* NewMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0D33242AAF968C00338DDF /* NewMessageView.swift */; };
 		AC0D33282AAF987300338DDF /* NewMessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0D33272AAF987300338DDF /* NewMessageViewModel.swift */; };
+		AC0D332E2AAF9D3F00338DDF /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0D332D2AAF9D3F00338DDF /* ProfileView.swift */; };
+		AC9E8F9C2AB085130046D19A /* SettingRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9E8F9B2AB085130046D19A /* SettingRowView.swift */; };
+		AC9E8F9E2AB086680046D19A /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9E8F9D2AB086680046D19A /* ProfileViewModel.swift */; };
+		AC9E8FA02AB088800046D19A /* SettingOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9E8F9F2AB088800046D19A /* SettingOptions.swift */; };
 		ACAD4E882AAF5D1600EDD02F /* MessengerAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAD4E872AAF5D1600EDD02F /* MessengerAppApp.swift */; };
 		ACAD4E8A2AAF5D1600EDD02F /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAD4E892AAF5D1600EDD02F /* SplashView.swift */; };
 		ACAD4E8C2AAF5D1700EDD02F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACAD4E8B2AAF5D1700EDD02F /* Assets.xcassets */; };
@@ -53,6 +57,10 @@
 		AC0D331C2AAF90E400338DDF /* ChatRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRowView.swift; sourceTree = "<group>"; };
 		AC0D33242AAF968C00338DDF /* NewMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageView.swift; sourceTree = "<group>"; };
 		AC0D33272AAF987300338DDF /* NewMessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageViewModel.swift; sourceTree = "<group>"; };
+		AC0D332D2AAF9D3F00338DDF /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileView.swift; path = MessengerApp/Modules/NewMessage/ViewModel/ProfileView.swift; sourceTree = SOURCE_ROOT; };
+		AC9E8F9B2AB085130046D19A /* SettingRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRowView.swift; sourceTree = "<group>"; };
+		AC9E8F9D2AB086680046D19A /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		AC9E8F9F2AB088800046D19A /* SettingOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingOptions.swift; sourceTree = "<group>"; };
 		ACAD4E842AAF5D1600EDD02F /* MessengerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessengerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACAD4E872AAF5D1600EDD02F /* MessengerAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessengerAppApp.swift; sourceTree = "<group>"; };
 		ACAD4E892AAF5D1600EDD02F /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
@@ -236,6 +244,33 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		AC0D332A2AAF9D1400338DDF /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				AC0D332C2AAF9D3600338DDF /* ViewModel */,
+				AC0D332B2AAF9D3100338DDF /* View */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		AC0D332B2AAF9D3100338DDF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AC0D332D2AAF9D3F00338DDF /* ProfileView.swift */,
+				AC9E8F9B2AB085130046D19A /* SettingRowView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AC0D332C2AAF9D3600338DDF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AC9E8F9D2AB086680046D19A /* ProfileViewModel.swift */,
+				AC9E8F9F2AB088800046D19A /* SettingOptions.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		ACAD4E7B2AAF5D1600EDD02F = {
 			isa = PBXGroup;
 			children = (
@@ -297,6 +332,7 @@
 		ACAD4E972AAF5D5C00EDD02F /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				AC0D332A2AAF9D1400338DDF /* Profile */,
 				AC0D33222AAF967E00338DDF /* NewMessage */,
 				AC0D33122AAF8BA400338DDF /* Home */,
 				AC0D32FE2AAF7DF900338DDF /* SignUp */,
@@ -443,23 +479,27 @@
 			files = (
 				AC0D32EF2AAF6D7C00338DDF /* String + EXT.swift in Sources */,
 				ACAD4EA92AAF625500EDD02F /* LottieAnimationView.swift in Sources */,
+				AC9E8F9C2AB085130046D19A /* SettingRowView.swift in Sources */,
 				AC0D33252AAF968C00338DDF /* NewMessageView.swift in Sources */,
 				AC0D331B2AAF8E6200338DDF /* ActiveNowView.swift in Sources */,
 				ACAD4E9E2AAF5DCC00EDD02F /* LoginView.swift in Sources */,
 				AC0D33192AAF8BC000338DDF /* HomeViewModel.swift in Sources */,
 				AC0D33152AAF8BAE00338DDF /* HomeView.swift in Sources */,
 				AC0D32F52AAF71EF00338DDF /* Image + EXT.swift in Sources */,
+				AC9E8FA02AB088800046D19A /* SettingOptions.swift in Sources */,
 				AC0D33112AAF81AE00338DDF /* PrimaryButton.swift in Sources */,
 				AC0D32F92AAF729600338DDF /* LoginViewModel.swift in Sources */,
 				AC0D32F32AAF704900338DDF /* LanguageManager.swift in Sources */,
 				AC0D33022AAF7E0F00338DDF /* SignUpView.swift in Sources */,
 				AC0D32FD2AAF795400338DDF /* TextFieldModifier.swift in Sources */,
 				AC0D330E2AAF804300338DDF /* PrimaryTextField.swift in Sources */,
+				AC9E8F9E2AB086680046D19A /* ProfileViewModel.swift in Sources */,
 				ACAD4E8A2AAF5D1600EDD02F /* SplashView.swift in Sources */,
 				AC0D33082AAF7E7900338DDF /* LogoImageView.swift in Sources */,
 				AC0D331D2AAF90E400338DDF /* ChatRowView.swift in Sources */,
 				AC0D33042AAF7E1C00338DDF /* SignUpViewModel.swift in Sources */,
 				ACAD4E882AAF5D1600EDD02F /* MessengerAppApp.swift in Sources */,
+				AC0D332E2AAF9D3F00338DDF /* ProfileView.swift in Sources */,
 				AC0D33282AAF987300338DDF /* NewMessageViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

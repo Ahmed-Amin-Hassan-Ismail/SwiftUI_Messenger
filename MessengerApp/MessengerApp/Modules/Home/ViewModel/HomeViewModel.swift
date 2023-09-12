@@ -13,4 +13,5 @@ final class HomeViewModel: ObservableObject {
     // MARK: - Properties
     
     @Published var showNewMessageView: Bool = false
+    @Published var showProfileView: Bool = false
 }

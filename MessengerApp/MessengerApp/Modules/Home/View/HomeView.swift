@@ -48,7 +48,10 @@ extension HomeView {
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 40, height: 40)
                 .clipShape(Circle())
-            
+                .onTapGesture {
+                    
+                    viewModel.showProfileView.toggle()
+                }
             
             Text("home_chat_title".localized)
                 .font(.title)
