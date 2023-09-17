@@ -11,12 +11,12 @@ struct CircularImageView: View {
     
     // MARK: - Properties
     
-    private let user: UserModel?
+    private let user: User?
     private let imageSize: ProfileImageSize
     
     // MARK: - Init
     
-    init(user: UserModel?, imageSize: ProfileImageSize) {
+    init(user: User?, imageSize: ProfileImageSize) {
         self.user = user
         self.imageSize = imageSize
     }

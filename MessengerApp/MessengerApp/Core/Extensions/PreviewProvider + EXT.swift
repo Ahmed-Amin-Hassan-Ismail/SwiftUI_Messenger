@@ -23,7 +23,7 @@ class DeveloperPreview {
     
     private init() { }
     
-    let user = UserModel(email: "ahmedAmin@gmail.com",
+    let user = User(email: "ahmedAmin@gmail.com",
                     fullname: "Ahmed Amin",
                     profileImageUrl: "https://picsum.photos/id/1/400/730")
 }

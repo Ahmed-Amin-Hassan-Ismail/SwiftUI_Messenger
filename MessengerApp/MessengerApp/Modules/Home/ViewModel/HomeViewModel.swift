@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Combine
 
 
 final class HomeViewModel: ObservableObject {
@@ -13,11 +14,28 @@ final class HomeViewModel: ObservableObject {
     // MARK: - Properties
     
     @Published var showNewMessageView: Bool = false
-    @Published var user: UserModel?
+    @Published var user: User?
     
+    
+    private var cancellables = Set<AnyCancellable>()
+    
+    // MARK: - Init
     
     init() {
         
-        self.user = DeveloperPreview.instance.user
+        addUserSubscriber()        
     }
+    
+    // MARK: - Methods
+    
+    func addUserSubscriber() {
+
+        UserService.instance.$currentUser
+            .receive(on: RunLoop.main)
+            .sink { [weak self] user in
+                self?.user = user
+            }
+            .store(in: &cancellables)
+    }
+    
 }

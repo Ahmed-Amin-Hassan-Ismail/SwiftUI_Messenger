@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import Firebase
+import FirebaseAuth
 
 final class AuthenticationManager {
     
@@ -18,8 +18,20 @@ final class AuthenticationManager {
     
     private init() {
         
-        self.userSession = Auth.auth().currentUser
+        setUserSession()
+        UserService.instance.fetchCurrentUserData()
+    }
+    
+    // MARK: - Methods
+    
+    func setUserSession() {
         
+        userSession = Auth.auth().currentUser
+    }
+    
+    func getUserUid() -> String? {
+        
+        return Auth.auth().currentUser?.uid
     }
 }
 

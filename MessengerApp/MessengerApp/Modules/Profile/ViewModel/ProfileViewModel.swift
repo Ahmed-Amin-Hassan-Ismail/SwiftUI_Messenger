@@ -15,7 +15,7 @@ final class ProfileViewModel: ObservableObject {
     // MARK: - Properties
     
     @Published var settingsOptions = SettingOptions.allCases
-    @Published var user: UserModel?
+    @Published var user: User?
     @Published var selectedPhoto: PhotosPickerItem?
     @Published var selectedProfileImage: Image?
     
@@ -25,7 +25,7 @@ final class ProfileViewModel: ObservableObject {
     
     // MARK: - Methods
     
-    init(user: UserModel?) {
+    init(user: User?) {
         
         self.user = user
         addPhotoSubscriber()

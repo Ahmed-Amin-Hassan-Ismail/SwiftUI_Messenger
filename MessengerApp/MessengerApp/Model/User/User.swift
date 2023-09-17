@@ -1,21 +1,26 @@
 //
-//  UserModel.swift
+//  User.swift
 //  MessengerApp
 //
 //  Created by Ahmed Amin on 12/09/2023.
 //
 
-import SwiftUI
+import Foundation
+import FirebaseFirestoreSwift
 
 
 
-struct UserModel: Codable, Identifiable, Hashable {
+struct User: Codable, Identifiable, Hashable {
     
-    var id: String = UUID().uuidString
+    @DocumentID var uid: String?
     var email: String?
     var fullname: String?
     var profileImageUrl: String?
     var profileImageData: Data?
+    
+    var id: String {
+        return uid ?? UUID().uuidString
+    }
     
     var imageUrl: URL? {
         return URL(string: profileImageUrl ?? "")

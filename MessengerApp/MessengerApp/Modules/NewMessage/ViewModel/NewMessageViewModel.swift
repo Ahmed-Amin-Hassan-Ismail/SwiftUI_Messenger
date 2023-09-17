@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Combine
 
 
 final class NewMessageViewModel: ObservableObject {
@@ -13,4 +14,27 @@ final class NewMessageViewModel: ObservableObject {
     // MARK: - Properties
     
     @Published var searchText: String = ""
+    @Published var allUsers: [User]?
+    
+    private var cancellables = Set<AnyCancellable>()
+    
+    
+    // MARK: - Init
+    
+    init() {
+        
+        addSubscribeOnAllUsers()
+    }
+    
+    func addSubscribeOnAllUsers() {
+        
+        UserService.instance.fetchAllUsers()
+        
+        UserService.instance.$allUsers
+            .receive(on: RunLoop.main)
+            .sink { [weak self] allUser in
+                self?.allUsers = allUser
+            }
+            .store(in: &cancellables)
+    }
 }

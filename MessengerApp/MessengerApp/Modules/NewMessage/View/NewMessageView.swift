@@ -23,8 +23,8 @@ struct NewMessageView: View {
                 
                 List {
                     Section {
-                        ForEach(0...4, id: \.self) { _ in
-                            newUsers
+                        ForEach(viewModel.allUsers ?? []) { user in
+                            setNewUser(user: user)
                         }
                     } header: {
                         Text("new_message_contacts".localized)
@@ -48,12 +48,12 @@ struct NewMessageView: View {
 
 extension NewMessageView {
     
-    private var newUsers: some View {
-        
+    
+    private func setNewUser(user: User) -> some View {
         HStack {
-            CircularImageView(user: DeveloperPreview.instance.user, imageSize: .large)
+            CircularImageView(user: user, imageSize: .large)
             
-            Text("Ahmed Amin")
+            Text(user.fullname ?? "")
                 .font(.headline)
                 .fontWeight(.semibold)
             
