@@ -19,9 +19,6 @@ final class ProfileViewModel: ObservableObject {
     @Published var selectedPhoto: PhotosPickerItem?
     @Published var selectedProfileImage: Image?
     
-    /// login view
-    @Published var shouldShowLoginView: Bool = false
-    
     private lazy var service = ProfileService()
     private var cancellables = Set<AnyCancellable>()
     
@@ -56,7 +53,7 @@ final class ProfileViewModel: ObservableObject {
     
     func didTapOnLogout() {
         
-        self.shouldShowLoginView = service.logout()
+        service.logout()
     }
     
     func didTapOnDeleteAccount() {

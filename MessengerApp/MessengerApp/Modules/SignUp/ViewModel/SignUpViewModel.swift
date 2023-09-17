@@ -20,8 +20,6 @@ final class SignUpViewModel: ObservableObject {
     /// logo animation
     @Published var isLogoAppeared: Bool = false
     
-    /// home view
-    @Published var shouldShowHomeView: Bool = false
     private lazy var service = SignUpService()
     
     
@@ -30,8 +28,7 @@ final class SignUpViewModel: ObservableObject {
     func didTapOnSignUp() {
         
         Task {            
-            self.shouldShowHomeView = try await service.createUser(withEmail:email, fullname: username, password: password)
+            try await service.createUser(withEmail:email, fullname: username, password: password)
         }
-        
     }
 }

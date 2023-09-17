@@ -7,7 +7,6 @@
 
 import Foundation
 import Firebase
-import FirebaseCore
 
 
 final class FirebaseManager {
@@ -23,25 +22,22 @@ final class FirebaseManager {
         FirebaseApp.configure()
     }
     
-    func isUserHasLoggedBefore() -> Bool {
-        
-        (Auth.auth().currentUser != nil)
-        
-    }
-    
     func login(email: String, password: String) async throws {
         
-       try await Auth.auth().signIn(withEmail: email, password: password)
+        let userSession = try await Auth.auth().signIn(withEmail: email, password: password)
+        AuthenticationManager.shared.userSession = userSession.user
     }
     
     func createUser(email: String, fullname: String, password: String) async throws {
         
-     try await Auth.auth().createUser(withEmail: email, password: password)
+        let userSession = try await Auth.auth().createUser(withEmail: email, password: password)
+        AuthenticationManager.shared.userSession = userSession.user
     }
     
     func logout() throws {
-                
+        
         try Auth.auth().signOut()
+        AuthenticationManager.shared.userSession = nil
         
     }
 }

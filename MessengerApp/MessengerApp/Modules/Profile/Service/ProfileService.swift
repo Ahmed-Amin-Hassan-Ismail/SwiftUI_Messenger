@@ -9,16 +9,14 @@ import Foundation
 
 final class ProfileService {
     
-    func logout() -> Bool {
+    func logout() {
         do {
             
             try FirebaseManager.shared.logout()
-            return true
             
         } catch {
-            debugPrint(ErrorHandling.catchError.localizedDescription)
-            return false
             
+            debugPrint(ErrorHandling.catchError.localizedDescription)
         }
     }
 }

@@ -32,9 +32,6 @@ struct ProfileView: View {
             
         }
         .padding(.top, 50)
-        .fullScreenCover(isPresented: $viewModel.shouldShowLoginView) {
-            LoginView()
-        }
     }
 }
 
@@ -57,7 +54,7 @@ extension ProfileView {
                                 Circle()
                                     .fill(Color.white)
                                     .frame(width: 25, height: 25)
-
+                                
                                 Image(systemName: "camera.fill")
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
@@ -105,7 +102,7 @@ extension ProfileView {
                 
                 ForEach(viewModel.settingsOptions) { option in
                     SettingRowView(option: option)
-                }                
+                }
             }
             
             Section {

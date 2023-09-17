@@ -50,10 +50,6 @@ struct SignUpView: View {
             loginButton
         }
         .padding()
-        .navigationDestination(isPresented: $viewModel.shouldShowHomeView, destination: {
-            HomeView()
-                .navigationBarBackButtonHidden()
-        })
         .onAppear {
             
             viewModel.isLogoAppeared = true

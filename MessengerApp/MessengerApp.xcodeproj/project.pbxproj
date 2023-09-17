@@ -54,6 +54,9 @@
 		ACAD4EA22AAF61D200EDD02F /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = ACAD4EA12AAF61D200EDD02F /* Lottie */; };
 		ACAD4EA42AAF61F500EDD02F /* splash.json in Resources */ = {isa = PBXBuildFile; fileRef = ACAD4EA32AAF61F500EDD02F /* splash.json */; };
 		ACAD4EA92AAF625500EDD02F /* LottieAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAD4EA82AAF625500EDD02F /* LottieAnimationView.swift */; };
+		ACB0641A2AB74A7C003425BB /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB064192AB74A7C003425BB /* AuthenticationManager.swift */; };
+		ACB0641E2AB74BAD003425BB /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB0641D2AB74BAD003425BB /* RootView.swift */; };
+		ACB064262AB75590003425BB /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB064252AB75590003425BB /* RootViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -101,6 +104,9 @@
 		ACAD4E9D2AAF5DCC00EDD02F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		ACAD4EA32AAF61F500EDD02F /* splash.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = splash.json; sourceTree = "<group>"; };
 		ACAD4EA82AAF625500EDD02F /* LottieAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieAnimationView.swift; sourceTree = "<group>"; };
+		ACB064192AB74A7C003425BB /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
+		ACB0641D2AB74BAD003425BB /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		ACB064252AB75590003425BB /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -447,6 +453,7 @@
 				AC0D32FE2AAF7DF900338DDF /* SignUp */,
 				ACAD4E9A2AAF5D7500EDD02F /* Login */,
 				ACAD4E9B2AAF5DAC00EDD02F /* Splash */,
+				ACB0641C2AB74B8D003425BB /* Root */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -500,8 +507,34 @@
 			children = (
 				ACAD4EA82AAF625500EDD02F /* LottieAnimationView.swift */,
 				AC0949132AB0C8AC00CA2754 /* FirebaseManager.swift */,
+				ACB064192AB74A7C003425BB /* AuthenticationManager.swift */,
 			);
 			path = Utilis;
+			sourceTree = "<group>";
+		};
+		ACB0641C2AB74B8D003425BB /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				ACB064242AB75583003425BB /* ViewModel */,
+				ACB0641F2AB74CCF003425BB /* View */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		ACB0641F2AB74CCF003425BB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ACB0641D2AB74BAD003425BB /* RootView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ACB064242AB75583003425BB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				ACB064252AB75590003425BB /* RootViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -612,15 +645,18 @@
 				AC9E8FA02AB088800046D19A /* SettingOptions.swift in Sources */,
 				AC0D33112AAF81AE00338DDF /* PrimaryButton.swift in Sources */,
 				AC0D32F92AAF729600338DDF /* LoginViewModel.swift in Sources */,
+				ACB0641E2AB74BAD003425BB /* RootView.swift in Sources */,
 				AC0D32F32AAF704900338DDF /* LanguageManager.swift in Sources */,
 				AC0D33022AAF7E0F00338DDF /* SignUpView.swift in Sources */,
 				AC0D330E2AAF804300338DDF /* PrimaryTextField.swift in Sources */,
 				AC9E8F9E2AB086680046D19A /* ProfileViewModel.swift in Sources */,
 				ACAD4E8A2AAF5D1600EDD02F /* SplashView.swift in Sources */,
 				AC0D33082AAF7E7900338DDF /* LogoImageView.swift in Sources */,
+				ACB064262AB75590003425BB /* RootViewModel.swift in Sources */,
 				AC0D331D2AAF90E400338DDF /* ChatRowView.swift in Sources */,
 				AC0D33042AAF7E1C00338DDF /* SignUpViewModel.swift in Sources */,
 				ACAD4E882AAF5D1600EDD02F /* MessengerAppApp.swift in Sources */,
+				ACB0641A2AB74A7C003425BB /* AuthenticationManager.swift in Sources */,
 				AC0949232AB0D3B700CA2754 /* ProfileService.swift in Sources */,
 				AC0D332E2AAF9D3F00338DDF /* ProfileView.swift in Sources */,
 				AC0D33282AAF987300338DDF /* NewMessageViewModel.swift in Sources */,

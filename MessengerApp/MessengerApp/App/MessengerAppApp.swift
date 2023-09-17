@@ -13,31 +13,12 @@ struct MessengerAppApp: App {
     // MARK: - Properties
     
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delefate
-    @State private var shouldShowLoginScreen: Bool = false
+    
     
     var body: some Scene {
         WindowGroup {
-            ZStack {
-                
-                if shouldShowLoginScreen {
-                    
-                    if FirebaseManager.shared.isUserHasLoggedBefore() {
-                        HomeView()
-                            .zIndex(0)
-                    } else {
-                        LoginView()
-                            .zIndex(0)
-                    }                                            
-                    
-                } else {
-                    
-                    SplashView(shouldShowLoginScreen: $shouldShowLoginScreen)
-                        .transition(.move(edge: .leading))
-                        .zIndex(1)
-                    
-                }
-                
-            }
+            
+            RootView()
         }
     }
 }

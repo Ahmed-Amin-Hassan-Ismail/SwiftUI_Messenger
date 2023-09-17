@@ -10,16 +10,15 @@ import Foundation
 
 final class SignUpService {
     
-    func createUser(withEmail email: String, fullname: String, password: String) async throws -> Bool {
+    func createUser(withEmail email: String, fullname: String, password: String) async throws {
         
         do {
             
            try await FirebaseManager.shared.createUser(email: email, fullname: fullname, password: password)
-            return true
             
         } catch {
+            
             debugPrint(ErrorHandling.catchError.errorDescription)
-            return false
         }
     }
 }
