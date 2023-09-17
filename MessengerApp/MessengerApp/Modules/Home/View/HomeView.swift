@@ -27,6 +27,9 @@ struct HomeView: View {
                 ChatRowView()
                     .padding(.horizontal)
             }
+            .onChange(of: viewModel.selectedUser, perform: { newValue in
+                viewModel.showChatView = (newValue != nil)
+            })
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) { profileView }
                 ToolbarItem(placement: .navigationBarTrailing) { newMessageView }
@@ -34,7 +37,11 @@ struct HomeView: View {
             .navigationDestination(for: User.self, destination: { user in
                 ProfileView(user: user)
             })
-            .fullScreenCover(isPresented: $viewModel.showNewMessageView, content: { NewMessageView() })
+            .navigationDestination(isPresented: $viewModel.showChatView, destination: {
+                ChatView(user: viewModel.selectedUser)
+            })
+            .fullScreenCover(isPresented: $viewModel.showNewMessageView, content: { NewMessageView(selectedUser: $viewModel.selectedUser)
+            })
         }
     }
 }

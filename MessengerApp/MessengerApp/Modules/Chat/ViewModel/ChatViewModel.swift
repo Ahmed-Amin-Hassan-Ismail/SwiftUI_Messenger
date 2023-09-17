@@ -12,7 +12,16 @@ final class ChatViewModel: ObservableObject {
     
     // MARK: - Properties
     
+    @Published var user: User?
     @Published var messageText: String = ""
+    
+    
+    // MARK: - Init
+    
+    init(user: User?) {
+        
+        self.user = user
+    }
     
     
     // MARK: - Methods

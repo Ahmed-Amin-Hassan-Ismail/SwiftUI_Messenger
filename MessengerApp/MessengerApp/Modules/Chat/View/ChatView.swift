@@ -11,7 +11,13 @@ struct ChatView: View {
     
     // MARK: - Properties
     
-    @StateObject private var viewModel = ChatViewModel()
+    @StateObject private var viewModel: ChatViewModel
+    
+    
+    // MARK: - Init
+    init(user: User?) {
+        _viewModel = StateObject(wrappedValue: ChatViewModel(user: user))
+    }
     
     
     // MARK: - Body
@@ -33,7 +39,7 @@ struct ChatView: View {
             sendMessageTextFieldView
             
         }
-        .navigationTitle("Ahmed Amin")
+        .navigationTitle(viewModel.user?.fullname ?? "")
         .navigationBarTitleDisplayMode(.inline)
     }
 }
@@ -45,9 +51,9 @@ extension ChatView {
     private var headerView: some View {
         
         VStack {
-            CircularImageView(user: DeveloperPreview.instance.user, imageSize: .xLarge)
+            CircularImageView(user: viewModel.user, imageSize: .xLarge)
             
-            Text("Ahmed Amin")
+            Text(viewModel.user?.fullname ?? "")
                 .font(.title3)
                 .fontWeight(.semibold)
             
@@ -83,7 +89,7 @@ extension ChatView {
 struct ChatView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
-            ChatView()
+            ChatView(user: dev.user)
         }
     }
 }

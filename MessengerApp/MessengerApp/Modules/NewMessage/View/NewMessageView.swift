@@ -11,6 +11,7 @@ struct NewMessageView: View {
     
     // MARK: - Properties
     
+    @Binding var selectedUser: User?
     @StateObject private var viewModel = NewMessageViewModel()
     @Environment(\.dismiss) private var dismiss
     
@@ -48,7 +49,6 @@ struct NewMessageView: View {
 
 extension NewMessageView {
     
-    
     private func setNewUser(user: User) -> some View {
         HStack {
             CircularImageView(user: user, imageSize: .large)
@@ -57,6 +57,10 @@ extension NewMessageView {
                 .font(.headline)
                 .fontWeight(.semibold)
             
+        }
+        .onTapGesture {
+            selectedUser = user
+            dismiss()
         }
     }
     
@@ -77,6 +81,6 @@ extension NewMessageView {
 
 struct NewMessageView_Previews: PreviewProvider {
     static var previews: some View {
-        NewMessageView()
+        NewMessageView(selectedUser: .constant(dev.user))
     }
 }

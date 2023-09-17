@@ -15,6 +15,8 @@ final class HomeViewModel: ObservableObject {
     
     @Published var showNewMessageView: Bool = false
     @Published var user: User?
+    @Published var selectedUser: User?
+    @Published var showChatView: Bool = false
     
     
     private var cancellables = Set<AnyCancellable>()

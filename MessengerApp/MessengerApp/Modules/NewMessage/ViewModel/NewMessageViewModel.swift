@@ -13,8 +13,10 @@ final class NewMessageViewModel: ObservableObject {
     
     // MARK: - Properties
     
-    @Published var searchText: String = ""
     @Published var allUsers: [User]?
+    @Published var searchText: String = ""
+    
+    @Published var chatWihUser: User?
     
     private var cancellables = Set<AnyCancellable>()
     
