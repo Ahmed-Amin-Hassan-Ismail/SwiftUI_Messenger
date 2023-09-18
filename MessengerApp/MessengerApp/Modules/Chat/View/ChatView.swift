@@ -24,15 +24,21 @@ struct ChatView: View {
     
     var body: some View {
         VStack {
-            
-            ScrollView {
-                VStack(spacing: 10) {
-                    
-                    headerView
-                    
-                    LazyVStack {
-                        ForEach(viewModel.allMessages) { message in
-                            ChatMessageRow(message: message)
+            if viewModel.allMessages.isEmpty {
+                
+                LottieAnimationView(lottieFile: "emptyChatView")
+                
+            } else {
+                
+                ScrollView {
+                    VStack(spacing: 10) {
+                        
+                        headerView
+                        
+                        LazyVStack {
+                            ForEach(viewModel.allMessages) { message in
+                                ChatMessageRow(message: message)
+                            }
                         }
                     }
                 }

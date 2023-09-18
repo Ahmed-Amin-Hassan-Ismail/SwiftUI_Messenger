@@ -21,10 +21,18 @@ struct HomeView: View {
         NavigationStack {
             
             VStack {
-                ActiveNowView(onlineUsers: viewModel.allUsers)
-                    .padding(.top, 20)
-                
-                ChatRowView(recentMessages: viewModel.recentMessages)
+                if viewModel.recentMessages.isEmpty {
+                    
+                    LottieAnimationView(lottieFile: "emptyMessage")
+                    
+                } else {
+                    if !(viewModel.allUsers?.isEmpty ?? true) {
+                        ActiveNowView(onlineUsers: viewModel.allUsers)
+                            .padding(.top, 20)
+                    }
+                    
+                    ChatRowView(recentMessages: viewModel.recentMessages)
+                }
             }
             .onChange(of: viewModel.selectedUser, perform: { newValue in
                 viewModel.showChatView = (newValue != nil)

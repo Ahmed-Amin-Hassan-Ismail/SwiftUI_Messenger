@@ -20,21 +20,28 @@ struct NewMessageView: View {
     var body: some View {
         NavigationStack {
             VStack(spacing: 0) {
-                PrimaryTextField(textFieldInput: $viewModel.searchText, title: "new_message_to_search".localized, isSecured: false)
-                
-                List {
-                    Section {
-                        ForEach(viewModel.allUsers ?? []) { user in
-                            setNewUser(user: user)
+                if (viewModel.allUsers?.isEmpty ?? true) {
+                    
+                    LottieAnimationView(lottieFile: "emptyUsers")
+                    
+                } else {
+                    
+                    PrimaryTextField(textFieldInput: $viewModel.searchText, title: "new_message_to_search".localized, isSecured: false)
+                    
+                    List {
+                        Section {
+                            ForEach(viewModel.allUsers ?? []) { user in
+                                setNewUser(user: user)
+                            }
+                        } header: {
+                            Text("new_message_contacts".localized)
+                                .font(.subheadline)
+                                .foregroundColor(.gray)
+                                .padding(.bottom, 10)
                         }
-                    } header: {
-                        Text("new_message_contacts".localized)
-                            .font(.subheadline)
-                            .foregroundColor(.gray)
-                            .padding(.bottom, 10)
                     }
+                    .listStyle(.plain)
                 }
-                .listStyle(.plain)
             }
             .navigationTitle("new_message_title".localized)
             .navigationBarTitleDisplayMode(.inline)

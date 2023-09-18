@@ -65,6 +65,9 @@
 		ACC6C4A22AB8A572000FE53F /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC6C4A12AB8A572000FE53F /* HomeService.swift */; };
 		ACC6C4A42AB8B654000FE53F /* Date + EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC6C4A32AB8B654000FE53F /* Date + EXT.swift */; };
 		ACC6C4A62AB8BD78000FE53F /* NavigationRout.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC6C4A52AB8BD78000FE53F /* NavigationRout.swift */; };
+		ACC6C4A82AB8C13D000FE53F /* emptyUsers.json in Resources */ = {isa = PBXBuildFile; fileRef = ACC6C4A72AB8C13D000FE53F /* emptyUsers.json */; };
+		ACC6C4AA2AB8C2E5000FE53F /* emptyChatView.json in Resources */ = {isa = PBXBuildFile; fileRef = ACC6C4A92AB8C2E5000FE53F /* emptyChatView.json */; };
+		ACC6C4AC2AB8C358000FE53F /* emptyMessage.json in Resources */ = {isa = PBXBuildFile; fileRef = ACC6C4AB2AB8C358000FE53F /* emptyMessage.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -123,6 +126,9 @@
 		ACC6C4A12AB8A572000FE53F /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
 		ACC6C4A32AB8B654000FE53F /* Date + EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date + EXT.swift"; sourceTree = "<group>"; };
 		ACC6C4A52AB8BD78000FE53F /* NavigationRout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRout.swift; sourceTree = "<group>"; };
+		ACC6C4A72AB8C13D000FE53F /* emptyUsers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = emptyUsers.json; sourceTree = "<group>"; };
+		ACC6C4A92AB8C2E5000FE53F /* emptyChatView.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = emptyChatView.json; sourceTree = "<group>"; };
+		ACC6C4AB2AB8C358000FE53F /* emptyMessage.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = emptyMessage.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -518,6 +524,9 @@
 			children = (
 				ACAD4E8B2AAF5D1700EDD02F /* Assets.xcassets */,
 				ACAD4EA32AAF61F500EDD02F /* splash.json */,
+				ACC6C4AB2AB8C358000FE53F /* emptyMessage.json */,
+				ACC6C4A72AB8C13D000FE53F /* emptyUsers.json */,
+				ACC6C4A92AB8C2E5000FE53F /* emptyChatView.json */,
 				AC0949082AB0C63700CA2754 /* GoogleService-Info.plist */,
 			);
 			path = Resources;
@@ -675,6 +684,9 @@
 				AC0D32E92AAF6BC500338DDF /* Localizable.strings in Resources */,
 				AC0949092AB0C63700CA2754 /* GoogleService-Info.plist in Resources */,
 				ACAD4E8F2AAF5D1700EDD02F /* Preview Assets.xcassets in Resources */,
+				ACC6C4AA2AB8C2E5000FE53F /* emptyChatView.json in Resources */,
+				ACC6C4AC2AB8C358000FE53F /* emptyMessage.json in Resources */,
+				ACC6C4A82AB8C13D000FE53F /* emptyUsers.json in Resources */,
 				ACAD4E8C2AAF5D1700EDD02F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
