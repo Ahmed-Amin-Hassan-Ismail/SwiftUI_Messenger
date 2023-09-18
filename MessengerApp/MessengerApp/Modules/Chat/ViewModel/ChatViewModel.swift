@@ -15,6 +15,8 @@ final class ChatViewModel: ObservableObject {
     @Published var user: User?
     @Published var messageText: String = ""
     
+    private lazy var service = ChatService()
+    
     
     // MARK: - Init
     
@@ -27,6 +29,10 @@ final class ChatViewModel: ObservableObject {
     // MARK: - Methods
     
     func didTapOnSend() {
-        /// not implemented yet
+        
+        guard !messageText.isEmpty else { return }
+        
+        service.sendNewMessage(messageText, toUser: user)
+        messageText = ""
     }
 }

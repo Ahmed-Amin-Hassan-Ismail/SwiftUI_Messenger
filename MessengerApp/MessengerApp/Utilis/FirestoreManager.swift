@@ -16,6 +16,9 @@ final class FirestoreManager {
     
     static let shared: FirestoreManager = FirestoreManager()
     
+    private let userCollection = Firestore.firestore().collection(CollectionName.users)
+    private let messageCollection = Firestore.firestore().collection(CollectionName.messages)
+    
     private init() { }
     
     
@@ -24,21 +27,45 @@ final class FirestoreManager {
     func uploadUserData(email: String, fullname: String, id: String) async throws {
         let user = User(email: email, fullname: fullname)
         guard let encodedUser = try? Firestore.Encoder().encode(user) else { return }
-        try await Firestore.firestore().collection(CollectionName.users).document(id).setData(encodedUser)
+        try await userCollection.document(id).setData(encodedUser)
     }
     
     func fetchCurrentUserData() async throws -> User? {
         guard let uid = AuthenticationManager.shared.getUserUid() else { return nil }
-        let snapshot = try await Firestore.firestore().collection(CollectionName.users).document(uid).getDocument()
+        let snapshot = try await userCollection.document(uid).getDocument()
         let user = try snapshot.data(as: User.self)
         return user
     }
     
     func fetchAllUsers() async throws -> [User] {
-        let snapshot = try await Firestore.firestore().collection(CollectionName.users).getDocuments()
+        let snapshot = try await userCollection.getDocuments()
         let users = snapshot.documents.compactMap({ try? $0.data(as: User.self) })
         let currentUserId = AuthenticationManager.shared.getUserUid() ?? ""
         return users.filter({ $0.id != currentUserId })
+    }
+    
+    func sendNewMessage(_ messageText: String, toUser user: User?) {
+        guard let uid = AuthenticationManager.shared.getUserUid(),
+              let user = user else { return }
+        let chatPartnerId = user.id
+        
+        let currentUserRef = messageCollection.document(uid).collection(chatPartnerId).document()
+        let chatPartnerRef = messageCollection.document(chatPartnerId).collection(uid)
+        
+        let messageId = currentUserRef.documentID
+        
+        let message = Message(
+            messageId: messageId,
+            fromId: uid,
+            toId: chatPartnerId,
+            textMessage: messageText,
+            timestamp: Timestamp()
+        )
+        
+        guard let messageData = try? Firestore.Encoder().encode(message) else { return }
+        
+        currentUserRef.setData(messageData)
+        chatPartnerRef.document(messageId).setData(messageData)
     }
 }
 

@@ -14,4 +14,5 @@ import Foundation
 enum CollectionName {
     
     static let users = "Users"
+    static let messages = "Messages"
 }

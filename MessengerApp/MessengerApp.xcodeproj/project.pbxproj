@@ -60,6 +60,8 @@
 		ACB064282AB75A68003425BB /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB064272AB75A68003425BB /* FirestoreManager.swift */; };
 		ACB0642B2AB75B28003425BB /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB0642A2AB75B28003425BB /* Constant.swift */; };
 		ACB0642D2AB76AE5003425BB /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB0642C2AB76AE5003425BB /* UserService.swift */; };
+		ACC6C49A2AB88ACA000FE53F /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC6C4992AB88ACA000FE53F /* Message.swift */; };
+		ACC6C49F2AB88BE6000FE53F /* ChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC6C49E2AB88BE6000FE53F /* ChatService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -113,6 +115,8 @@
 		ACB064272AB75A68003425BB /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
 		ACB0642A2AB75B28003425BB /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		ACB0642C2AB76AE5003425BB /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		ACC6C4992AB88ACA000FE53F /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		ACC6C49E2AB88BE6000FE53F /* ChatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +147,7 @@
 		AC0948FD2AB0B59D00CA2754 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				ACC6C49D2AB88BDC000FE53F /* Service */,
 				AC0948FF2AB0B5A200CA2754 /* ViewModel */,
 				AC0948FE2AB0B5A000CA2754 /* View */,
 			);
@@ -468,6 +473,7 @@
 		ACAD4E982AAF5D5F00EDD02F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				ACC6C4982AB88A0F000FE53F /* Message */,
 				ACB0642E2AB76B9C003425BB /* User */,
 			);
 			path = Model;
@@ -560,6 +566,22 @@
 				AC9E8FA12AB0990B0046D19A /* User.swift */,
 			);
 			path = User;
+			sourceTree = "<group>";
+		};
+		ACC6C4982AB88A0F000FE53F /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				ACC6C4992AB88ACA000FE53F /* Message.swift */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		ACC6C49D2AB88BDC000FE53F /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				ACC6C49E2AB88BE6000FE53F /* ChatService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -664,6 +686,7 @@
 				AC0949142AB0C8AC00CA2754 /* FirebaseManager.swift in Sources */,
 				AC0D33192AAF8BC000338DDF /* HomeViewModel.swift in Sources */,
 				AC0D33152AAF8BAE00338DDF /* HomeView.swift in Sources */,
+				ACC6C49A2AB88ACA000FE53F /* Message.swift in Sources */,
 				AC09491C2AB0CBBF00CA2754 /* SignUpService.swift in Sources */,
 				ACB0642D2AB76AE5003425BB /* UserService.swift in Sources */,
 				AC0D32F52AAF71EF00338DDF /* Image + EXT.swift in Sources */,
@@ -685,6 +708,7 @@
 				ACB0641A2AB74A7C003425BB /* AuthenticationManager.swift in Sources */,
 				ACB0642B2AB75B28003425BB /* Constant.swift in Sources */,
 				AC0949232AB0D3B700CA2754 /* ProfileService.swift in Sources */,
+				ACC6C49F2AB88BE6000FE53F /* ChatService.swift in Sources */,
 				AC0D332E2AAF9D3F00338DDF /* ProfileView.swift in Sources */,
 				ACB064282AB75A68003425BB /* FirestoreManager.swift in Sources */,
 				AC0D33282AAF987300338DDF /* NewMessageViewModel.swift in Sources */,
