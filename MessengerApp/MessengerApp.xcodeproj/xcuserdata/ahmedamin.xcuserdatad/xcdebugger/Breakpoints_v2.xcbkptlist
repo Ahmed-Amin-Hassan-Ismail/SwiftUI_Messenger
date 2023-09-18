@@ -3,4 +3,148 @@
    uuid = "1D65C57D-85A9-456F-B7D7-4A72FADC9B71"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "92140D41-93A1-4688-9682-2E47F948D1A6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MessengerApp/Modules/Home/ViewModel/HomeViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "addUserSubscriber()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C88849FC-E84E-448F-A18E-9E1FA80DE184"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MessengerApp/Model/User/UserService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "fetchAllUsers()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C88849FC-E84E-448F-A18E-9E1FA80DE184 - 620d21eec65684b3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async throws -&gt; () in MessengerApp.UserService.fetchAllUsers() -&gt; ()"
+                  moduleName = "MessengerApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmedamin/Desktop/My%20Projects/SwiftUI_Messenger/MessengerApp/MessengerApp/Model/User/UserService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "60">
+               </Location>
+               <Location
+                  uuid = "C88849FC-E84E-448F-A18E-9E1FA80DE184 - d6250880a415c1be"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for closure #1 @Sendable () async throws -&gt; () in MessengerApp.UserService.fetchAllUsers() -&gt; ()"
+                  moduleName = "MessengerApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmedamin/Desktop/My%20Projects/SwiftUI_Messenger/MessengerApp/MessengerApp/Model/User/UserService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  uuid = "C88849FC-E84E-448F-A18E-9E1FA80DE184 - 3f226231cac17951"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async throws -&gt; () in MessengerApp.UserService.fetchAllUsers() -&gt; ()"
+                  moduleName = "MessengerApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmedamin/Desktop/My%20Projects/SwiftUI_Messenger/MessengerApp/MessengerApp/Model/User/UserService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  uuid = "C88849FC-E84E-448F-A18E-9E1FA80DE184 - 66b60364488a3f66"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for closure #1 @Sendable () async throws -&gt; () in MessengerApp.UserService.fetchAllUsers() -&gt; ()"
+                  moduleName = "MessengerApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmedamin/Desktop/My%20Projects/SwiftUI_Messenger/MessengerApp/MessengerApp/Model/User/UserService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BFC78026-1E3B-4B20-B81A-F1562811BEAC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MessengerApp/Utilis/FirestoreManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "fetchAllUsers()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BFC78026-1E3B-4B20-B81A-F1562811BEAC - 9f76919f812b9f63"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for MessengerApp.FirestoreManager.fetchAllUsers() async throws -&gt; Swift.Array&lt;MessengerApp.User&gt;"
+                  moduleName = "MessengerApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmedamin/Desktop/My%20Projects/SwiftUI_Messenger/MessengerApp/MessengerApp/Utilis/FirestoreManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "124">
+               </Location>
+               <Location
+                  uuid = "BFC78026-1E3B-4B20-B81A-F1562811BEAC - 9c8355adb706b123"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.FIRQueryDocumentSnapshot) -&gt; Swift.Optional&lt;MessengerApp.User&gt; in MessengerApp.FirestoreManager.fetchAllUsers() async throws -&gt; Swift.Array&lt;MessengerApp.User&gt;"
+                  moduleName = "MessengerApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmedamin/Desktop/My%20Projects/SwiftUI_Messenger/MessengerApp/MessengerApp/Utilis/FirestoreManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "48">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

@@ -14,9 +14,10 @@ final class HomeViewModel: ObservableObject {
     // MARK: - Properties
     
     @Published var showNewMessageView: Bool = false
-    @Published var user: User?
-    @Published var selectedUser: User?
-    @Published var recentMessages: [Message] = []
+    @Published var user: User?                       /// current user
+    @Published var selectedUser: User?              /// for navigate to chat view from new message view
+    @Published var allUsers: [User]?               /// for active now view
+    @Published var recentMessages: [Message] = [] /// to show recent messages for each use
     @Published var showChatView: Bool = false
     
     
@@ -27,6 +28,7 @@ final class HomeViewModel: ObservableObject {
     
     init() {
         
+        UserService.instance.fetchAllUsers()
         addUserSubscriber()
         observeRecentMessages()
     }
@@ -39,6 +41,13 @@ final class HomeViewModel: ObservableObject {
             .receive(on: RunLoop.main)
             .sink { [weak self] user in
                 self?.user = user
+            }
+            .store(in: &cancellables)
+        
+        UserService.instance.$allUsers
+            .receive(on: RunLoop.main)
+            .sink { [weak self] allUsers in
+                self?.allUsers = allUsers
             }
             .store(in: &cancellables)
     }

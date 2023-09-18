@@ -64,6 +64,7 @@
 		ACC6C49F2AB88BE6000FE53F /* ChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC6C49E2AB88BE6000FE53F /* ChatService.swift */; };
 		ACC6C4A22AB8A572000FE53F /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC6C4A12AB8A572000FE53F /* HomeService.swift */; };
 		ACC6C4A42AB8B654000FE53F /* Date + EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC6C4A32AB8B654000FE53F /* Date + EXT.swift */; };
+		ACC6C4A62AB8BD78000FE53F /* NavigationRout.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC6C4A52AB8BD78000FE53F /* NavigationRout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -121,6 +122,7 @@
 		ACC6C49E2AB88BE6000FE53F /* ChatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatService.swift; sourceTree = "<group>"; };
 		ACC6C4A12AB8A572000FE53F /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
 		ACC6C4A32AB8B654000FE53F /* Date + EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date + EXT.swift"; sourceTree = "<group>"; };
+		ACC6C4A52AB8BD78000FE53F /* NavigationRout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -528,6 +530,7 @@
 				AC0949132AB0C8AC00CA2754 /* FirebaseManager.swift */,
 				ACB064192AB74A7C003425BB /* AuthenticationManager.swift */,
 				ACB064272AB75A68003425BB /* FirestoreManager.swift */,
+				ACC6C4A52AB8BD78000FE53F /* NavigationRout.swift */,
 			);
 			path = Utilis;
 			sourceTree = "<group>";
@@ -724,6 +727,7 @@
 				ACB0641A2AB74A7C003425BB /* AuthenticationManager.swift in Sources */,
 				ACB0642B2AB75B28003425BB /* Constant.swift in Sources */,
 				AC0949232AB0D3B700CA2754 /* ProfileService.swift in Sources */,
+				ACC6C4A62AB8BD78000FE53F /* NavigationRout.swift in Sources */,
 				ACC6C49F2AB88BE6000FE53F /* ChatService.swift in Sources */,
 				AC0D332E2AAF9D3F00338DDF /* ProfileView.swift in Sources */,
 				ACB064282AB75A68003425BB /* FirestoreManager.swift in Sources */,

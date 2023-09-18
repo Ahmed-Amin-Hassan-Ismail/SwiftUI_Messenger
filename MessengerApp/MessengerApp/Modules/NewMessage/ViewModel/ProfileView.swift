@@ -15,7 +15,7 @@ struct ProfileView: View {
     
     @StateObject private var viewModel: ProfileViewModel
     
-    init(user: User) {
+    init(user: User?) {
         
         _viewModel = StateObject(wrappedValue: ProfileViewModel(user: user))
     }

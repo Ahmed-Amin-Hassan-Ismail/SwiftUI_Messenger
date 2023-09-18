@@ -30,8 +30,10 @@ struct ChatView: View {
                     
                     headerView
                     
-                    ForEach(viewModel.allMessages) { message in
-                        ChatMessageRow(message: message)
+                    LazyVStack {
+                        ForEach(viewModel.allMessages) { message in
+                            ChatMessageRow(message: message)
+                        }
                     }
                 }
             }

@@ -21,7 +21,7 @@ struct HomeView: View {
         NavigationStack {
             
             VStack {
-                ActiveNowView()
+                ActiveNowView(onlineUsers: viewModel.allUsers)
                     .padding(.top, 20)
                 
                 ChatRowView(recentMessages: viewModel.recentMessages)
@@ -33,8 +33,16 @@ struct HomeView: View {
                 ToolbarItem(placement: .navigationBarLeading) { profileView }
                 ToolbarItem(placement: .navigationBarTrailing) { newMessageView }
             }
-            .navigationDestination(for: User.self, destination: { user in
-                ProfileView(user: user)
+            .navigationDestination(for: Message.self) { message in
+                ChatView(user: message.user)
+            }
+            .navigationDestination(for: NavigationRout.self, destination: { rout in
+                switch rout {
+                case .profileView(let user):
+                    ProfileView(user: user)
+                case .chatView(let user):
+                    ChatView(user: user)
+                }
             })
             .navigationDestination(isPresented: $viewModel.showChatView, destination: {
                 ChatView(user: viewModel.selectedUser)
@@ -52,7 +60,7 @@ extension HomeView {
     
     private var profileView: some View {
         HStack {
-            NavigationLink(value: viewModel.user) {
+            NavigationLink(value: NavigationRout.profileView(viewModel.user)) {
                 
                 CircularImageView(user: viewModel.user, imageSize: .small)
             }

@@ -52,11 +52,6 @@ struct ChatRowView: View {
         }
         .scrollIndicators(.hidden)
         .listStyle(.plain)
-        .navigationDestination(for: Message.self) { message in
-            ChatView(user: message.user)
-        }
-        
-        
     }
 }
 

@@ -12,7 +12,7 @@ extension Date {
  
     
     private var timeFormatter: DateFormatter {
-        var formatter = DateFormatter()
+        let formatter = DateFormatter()
         formatter.timeStyle = .short
         formatter.dateFormat = "HH:mm"
         
@@ -20,7 +20,7 @@ extension Date {
     }
     
     private var dayFormatter: DateFormatter {
-        var formatter = DateFormatter()
+        let formatter = DateFormatter()
         formatter.timeStyle = .medium
         formatter.dateFormat = "MM/dd/yy"
         

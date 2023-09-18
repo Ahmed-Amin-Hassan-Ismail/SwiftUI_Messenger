@@ -25,4 +25,12 @@ struct User: Codable, Identifiable, Hashable {
     var imageUrl: URL? {
         return URL(string: profileImageUrl ?? "")
     }
+    
+    /// to grap first name from full name
+    var firstName: String {
+        let formatter = PersonNameComponentsFormatter()
+        let component = formatter.personNameComponents(from: fullname ?? "")
+        return component?.givenName ?? fullname ?? ""
+        
+    }
 }

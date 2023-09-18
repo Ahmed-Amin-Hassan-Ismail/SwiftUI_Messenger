@@ -9,14 +9,26 @@ import SwiftUI
 
 struct ActiveNowView: View {
     
+    // MARK: - Properties
+    
+    private let onlineUsers: [User]?
+    
+    // MARK: - Init
+    init(onlineUsers: [User]?) {
+        
+        self.onlineUsers = onlineUsers
+    }
+    
     
     // MARK: - Body
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             LazyHStack(spacing: 20) {
-                ForEach(0...10, id: \.self) { _ in
-                   activeView
+                ForEach(onlineUsers ?? []) { user in
+                    NavigationLink(value: NavigationRout.chatView(user)) {
+                        setupActiveView(withUser: user)
+                    }
                 }
             }
             .padding()
@@ -29,10 +41,9 @@ struct ActiveNowView: View {
 
 extension ActiveNowView {
     
-    private var activeView: some View {
-        
+    private func setupActiveView(withUser user: User) -> some View {
         VStack {
-            CircularImageView(user: DeveloperPreview.instance.user, imageSize: .large)
+            CircularImageView(user: user, imageSize: .large)
                 .overlay(
                     ZStack {
                         Circle()
@@ -45,7 +56,7 @@ extension ActiveNowView {
                     ,alignment: .bottomTrailing)
             
             
-            Text("Ahmed Amin")
+            Text(user.firstName)
                 .font(.subheadline)
                 .foregroundColor(.gray)
         }
@@ -54,6 +65,6 @@ extension ActiveNowView {
 
 struct ActiveNowView_Previews: PreviewProvider {
     static var previews: some View {
-        ActiveNowView()
+        ActiveNowView(onlineUsers: [dev.user, dev.user])
     }
 }
