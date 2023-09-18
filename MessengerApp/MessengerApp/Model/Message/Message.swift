@@ -30,4 +30,9 @@ struct Message: Codable, Identifiable, Hashable {
     var isFromCurrentUser: Bool {
         return (fromId == AuthenticationManager.shared.getUserUid())
     }
+    
+    var timestampString: String {
+        
+        return timestamp?.dateValue().timestampString() ?? ""
+    }
 }

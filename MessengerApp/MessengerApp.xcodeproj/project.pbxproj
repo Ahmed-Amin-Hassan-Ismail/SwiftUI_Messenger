@@ -63,6 +63,7 @@
 		ACC6C49A2AB88ACA000FE53F /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC6C4992AB88ACA000FE53F /* Message.swift */; };
 		ACC6C49F2AB88BE6000FE53F /* ChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC6C49E2AB88BE6000FE53F /* ChatService.swift */; };
 		ACC6C4A22AB8A572000FE53F /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC6C4A12AB8A572000FE53F /* HomeService.swift */; };
+		ACC6C4A42AB8B654000FE53F /* Date + EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC6C4A32AB8B654000FE53F /* Date + EXT.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -119,6 +120,7 @@
 		ACC6C4992AB88ACA000FE53F /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		ACC6C49E2AB88BE6000FE53F /* ChatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatService.swift; sourceTree = "<group>"; };
 		ACC6C4A12AB8A572000FE53F /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
+		ACC6C4A32AB8B654000FE53F /* Date + EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date + EXT.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +228,7 @@
 			children = (
 				AC0D32EE2AAF6D7C00338DDF /* String + EXT.swift */,
 				AC0D32F42AAF71EF00338DDF /* Image + EXT.swift */,
+				ACC6C4A32AB8B654000FE53F /* Date + EXT.swift */,
 				AC9E8FA52AB09A3A0046D19A /* PreviewProvider + EXT.swift */,
 			);
 			path = Extensions;
@@ -712,6 +715,7 @@
 				AC0D330E2AAF804300338DDF /* PrimaryTextField.swift in Sources */,
 				AC9E8F9E2AB086680046D19A /* ProfileViewModel.swift in Sources */,
 				ACAD4E8A2AAF5D1600EDD02F /* SplashView.swift in Sources */,
+				ACC6C4A42AB8B654000FE53F /* Date + EXT.swift in Sources */,
 				AC0D33082AAF7E7900338DDF /* LogoImageView.swift in Sources */,
 				ACB064262AB75590003425BB /* RootViewModel.swift in Sources */,
 				AC0D331D2AAF90E400338DDF /* ChatRowView.swift in Sources */,

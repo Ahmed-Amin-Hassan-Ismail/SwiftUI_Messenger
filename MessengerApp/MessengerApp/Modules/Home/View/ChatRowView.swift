@@ -29,22 +29,32 @@ struct ChatRowView: View {
         
         List {
             ForEach(recentMessages) { message in
-                HStack(alignment: .top, spacing: 12) {
+                ZStack {
+                    NavigationLink(value: message) {
+                        EmptyView()
+                    }
+                    .opacity(0.0)
                     
-                    setupLeftView(withMessage: message)
-                    
-                    setupMiddleView(withMessage: message)
-                    
-                    Spacer()
-                    
-                    setupRightView(withMessage: message)
-                    
+                    HStack(alignment: .top, spacing: 12) {
+                        
+                        setupLeftView(withMessage: message)
+                        
+                        setupMiddleView(withMessage: message)
+                        
+                        Spacer()
+                        
+                        setupRightView(withMessage: message)
+                        
+                    }
+                    .listRowInsets(rowInset)
                 }
-                .listRowInsets(rowInset)
             }
         }
         .scrollIndicators(.hidden)
         .listStyle(.plain)
+        .navigationDestination(for: Message.self) { message in
+            ChatView(user: message.user)
+        }
         
         
     }
@@ -70,9 +80,9 @@ extension ChatRowView {
         .font(.subheadline)
     }
     
-    private func setupRightView(withMessage: Message) -> some View {
+    private func setupRightView(withMessage message: Message) -> some View {
         HStack {
-            Text("Yesterday")
+            Text(message.timestampString)
             
             Image(systemName: "chevron.right")
             
