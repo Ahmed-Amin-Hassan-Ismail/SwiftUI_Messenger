@@ -45,23 +45,30 @@ extension ProfileView {
             
             PhotosPicker(selection: $viewModel.selectedPhoto) {
                 
-                if let imagePicker = viewModel.selectedProfileImage {
-                    setProfileImage(image: imagePicker)
+                if viewModel.shouldShowProgressView {
+                    
+                    ProgressView()
+                    
                 } else {
-                    CircularImageView(user: viewModel.user, imageSize: .xLarge)
-                        .overlay(
-                            ZStack {
-                                Circle()
-                                    .fill(Color.white)
-                                    .frame(width: 25, height: 25)
-                                
-                                Image(systemName: "camera.fill")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: 18, height: 18)
-                                    .foregroundColor(.black)
-                            }
-                            ,alignment: .bottomTrailing)
+                    
+                    if let imagePicker = viewModel.selectedProfileImage {
+                        setProfileImage(image: imagePicker)
+                    } else {
+                        CircularImageView(user: viewModel.user, imageSize: .xLarge)
+                            .overlay(
+                                ZStack {
+                                    Circle()
+                                        .fill(Color.white)
+                                        .frame(width: 25, height: 25)
+                                    
+                                    Image(systemName: "camera.fill")
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(width: 18, height: 18)
+                                        .foregroundColor(.black)
+                                }
+                                ,alignment: .bottomTrailing)
+                    }
                 }
             }
             

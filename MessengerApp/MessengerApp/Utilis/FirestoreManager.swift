@@ -30,6 +30,13 @@ final class FirestoreManager {
         try await userCollection.document(id).setData(encodedUser)
     }
     
+    
+    func updateCurrectUser(user: User?) async throws {
+        guard let user = user else { return }
+        guard let encodedUser = try? Firestore.Encoder().encode(user) else { return }
+        try await userCollection.document(user.uid ?? "").updateData(encodedUser)
+    }
+    
     func fetchCurrentUserData() async throws -> User? {
         guard let uid = AuthenticationManager.shared.getUserUid() else { return nil }
         let snapshot = try await userCollection.document(uid).getDocument()

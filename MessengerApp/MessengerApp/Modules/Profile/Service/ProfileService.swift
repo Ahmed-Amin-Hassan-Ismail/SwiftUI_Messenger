@@ -19,4 +19,15 @@ final class ProfileService {
             debugPrint(ErrorHandling.catchError.localizedDescription)
         }
     }
+    
+    func pushImageIntoStorage(imageData: Data) async throws -> URL {
+        
+       return try await StorageManager.shared.pushImageIntoStorage(imageData: imageData)
+        
+    }
+    
+    func updateCurrentUser(user: User?)  async throws {
+        
+        try await FirestoreManager.shared.updateCurrectUser(user: user)
+    }
 }

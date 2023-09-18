@@ -18,6 +18,7 @@ final class ProfileViewModel: ObservableObject {
     @Published var user: User?
     @Published var selectedPhoto: PhotosPickerItem?
     @Published var selectedProfileImage: Image?
+    @Published var shouldShowProgressView: Bool = false
     
     private lazy var service = ProfileService()
     private var cancellables = Set<AnyCancellable>()
@@ -41,14 +42,21 @@ final class ProfileViewModel: ObservableObject {
             }
             .store(in: &cancellables)
     }
-  
+    
     @MainActor
     private func loadUserImage(item: PhotosPickerItem?) async throws {
         guard let item = item else { return }
-        guard let imageData = try await item.loadTransferable(type: Data.self) else { return }
-        guard let uiImage = UIImage(data: imageData) else { return }
+        guard let data = try await item.loadTransferable(type: Data.self) else { return }
+        guard let uiImage = UIImage(data: data) else { return }
+        guard let imageData =  uiImage.jpegData(compressionQuality: 0.1) else { return }
         
-        self.selectedProfileImage = Image(uiImage: uiImage)
+        shouldShowProgressView = true
+        
+        user?.profileImageUrl = try await service.pushImageIntoStorage(imageData: imageData).absoluteString
+        try await service.updateCurrentUser(user: user)
+        
+        selectedProfileImage = Image(uiImage: uiImage)
+        shouldShowProgressView = false
     }
     
     func didTapOnLogout() {
