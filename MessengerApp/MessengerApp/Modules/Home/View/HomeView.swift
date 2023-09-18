@@ -69,6 +69,7 @@ extension HomeView {
         Button {
             
             viewModel.showNewMessageView.toggle()
+            viewModel.selectedUser = nil
             
         } label: {
             Image(systemName: "square.and.pencil.circle.fill")
