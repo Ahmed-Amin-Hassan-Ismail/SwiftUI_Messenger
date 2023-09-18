@@ -15,4 +15,5 @@ enum CollectionName {
     
     static let users = "Users"
     static let messages = "Messages"
+    static let recentMessage = "Recent_Message"
 }

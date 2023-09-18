@@ -11,23 +11,33 @@ struct ChatRowView: View {
     
     // MARK: - Properties
     
+    private let recentMessages: [Message]
     private let rowInset: EdgeInsets = EdgeInsets(top: 15, leading: 0, bottom: 0, trailing: 0)
+    
+    
+    // MARK: - Init
+    
+    init(recentMessages: [Message]) {
+        self.recentMessages = recentMessages
+    }
+    
+    
     
     // MARK: - Body
     
     var body: some View {
-     
+        
         List {
-            ForEach(0...10, id:\.self) { _ in
+            ForEach(recentMessages) { message in
                 HStack(alignment: .top, spacing: 12) {
                     
-                    leftView
+                    setupLeftView(withMessage: message)
                     
-                    middleView
+                    setupMiddleView(withMessage: message)
                     
                     Spacer()
                     
-                    rightView
+                    setupRightView(withMessage: message)
                     
                 }
                 .listRowInsets(rowInset)
@@ -44,36 +54,37 @@ struct ChatRowView: View {
 
 extension ChatRowView {
     
-    private var leftView: some View {
-        CircularImageView(user: DeveloperPreview.instance.user, imageSize: .large)
+    private func setupLeftView(withMessage message: Message) -> some View {
+        CircularImageView(user: message.user, imageSize: .large)
     }
     
-    private var middleView: some View {
+    private func setupMiddleView(withMessage message: Message) -> some View {
         VStack(alignment: .leading, spacing: 4) {
-            Text("Ahmed Amin")
+            Text(message.user?.fullname ?? "")
                 .fontWeight(.bold)
-                
-            Text("How are you?")
+            
+            Text(message.textMessage ?? "")
                 .foregroundColor(.gray)
                 .lineLimit(2)
         }
         .font(.subheadline)
     }
     
-    private var rightView: some View {
+    private func setupRightView(withMessage: Message) -> some View {
         HStack {
             Text("Yesterday")
             
-                Image(systemName: "chevron.right")
+            Image(systemName: "chevron.right")
             
         }
         .font(.subheadline)
-    .foregroundColor(.gray)
+        .foregroundColor(.gray)
     }
+    
 }
 
 struct ChatRowView_Previews: PreviewProvider {
     static var previews: some View {
-        ChatRowView()
+        ChatRowView(recentMessages: [])
     }
 }

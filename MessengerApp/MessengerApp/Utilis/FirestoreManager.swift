@@ -44,6 +44,14 @@ final class FirestoreManager {
         return users.filter({ $0.id != currentUserId })
     }
     
+    func fetchCertainUser(withUid uid: String?, completion: @escaping (User) -> Void) {
+        guard let uid = uid else { return }
+        userCollection.document(uid).getDocument { snapshot, _ in
+            guard let user = try? snapshot?.data(as: User.self) else { return }
+            completion(user)
+        }
+    }
+    
     func sendNewMessage(_ messageText: String, toUser user: User?) {
         guard let uid = AuthenticationManager.shared.getUserUid(),
               let user = user else { return }
@@ -51,6 +59,9 @@ final class FirestoreManager {
         
         let currentUserRef = messageCollection.document(uid).collection(chatPartnerId).document()
         let chatPartnerRef = messageCollection.document(chatPartnerId).collection(uid)
+        
+        let recentMessageCurrentUserRef = messageCollection.document(uid).collection(CollectionName.recentMessage).document(chatPartnerId)
+        let recentMessagePartnerRef = messageCollection.document(chatPartnerId).collection(CollectionName.recentMessage).document(uid)
         
         let messageId = currentUserRef.documentID
         
@@ -66,6 +77,9 @@ final class FirestoreManager {
         
         currentUserRef.setData(messageData)
         chatPartnerRef.document(messageId).setData(messageData)
+        
+        recentMessageCurrentUserRef.setData(messageData)
+        recentMessagePartnerRef.setData(messageData)
     }
     
     func fetchAllMessage(chatPartner: User?, completion: @escaping ([Message]?) -> Void) {
@@ -91,5 +105,33 @@ final class FirestoreManager {
                 completion(messages)
             }
     }
+    
+    func fetchInitialMessages(completion: @escaping ([Message]) -> Void) {
+        
+        fetchDocumentChanges { changes in
+            
+            let messages = changes.compactMap({ try? $0.document.data(as: Message.self) })
+            
+            completion(messages)
+        }
+    }
+}
+
+// MARK: - PRIVATE METHODS
+
+extension FirestoreManager {
+    
+    private func fetchDocumentChanges(completion: @escaping ([DocumentChange]) -> Void) {
+         guard let uid = AuthenticationManager.shared.getUserUid() else { return }
+         
+         let query = messageCollection.document(uid).collection(CollectionName.recentMessage).order(by: "timestamp", descending: true)
+         
+         query.addSnapshotListener { (snapshot, _) in
+             
+             guard let changes = snapshot?.documentChanges.filter({ $0.type == .added || $0.type == .modified }) else { return }
+             
+             completion(changes)
+         }
+     }
 }
 

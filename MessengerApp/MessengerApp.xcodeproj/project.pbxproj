@@ -62,6 +62,7 @@
 		ACB0642D2AB76AE5003425BB /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB0642C2AB76AE5003425BB /* UserService.swift */; };
 		ACC6C49A2AB88ACA000FE53F /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC6C4992AB88ACA000FE53F /* Message.swift */; };
 		ACC6C49F2AB88BE6000FE53F /* ChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC6C49E2AB88BE6000FE53F /* ChatService.swift */; };
+		ACC6C4A22AB8A572000FE53F /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC6C4A12AB8A572000FE53F /* HomeService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -117,6 +118,7 @@
 		ACB0642C2AB76AE5003425BB /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		ACC6C4992AB88ACA000FE53F /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		ACC6C49E2AB88BE6000FE53F /* ChatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatService.swift; sourceTree = "<group>"; };
+		ACC6C4A12AB8A572000FE53F /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -317,6 +319,7 @@
 		AC0D33122AAF8BA400338DDF /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				ACC6C4A02AB8A569000FE53F /* Service */,
 				AC0D33162AAF8BB200338DDF /* ViewModel */,
 				AC0D33132AAF8BA800338DDF /* View */,
 			);
@@ -584,6 +587,14 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		ACC6C4A02AB8A569000FE53F /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				ACC6C4A12AB8A572000FE53F /* HomeService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -687,6 +698,7 @@
 				AC0D33192AAF8BC000338DDF /* HomeViewModel.swift in Sources */,
 				AC0D33152AAF8BAE00338DDF /* HomeView.swift in Sources */,
 				ACC6C49A2AB88ACA000FE53F /* Message.swift in Sources */,
+				ACC6C4A22AB8A572000FE53F /* HomeService.swift in Sources */,
 				AC09491C2AB0CBBF00CA2754 /* SignUpService.swift in Sources */,
 				ACB0642D2AB76AE5003425BB /* UserService.swift in Sources */,
 				AC0D32F52AAF71EF00338DDF /* Image + EXT.swift in Sources */,

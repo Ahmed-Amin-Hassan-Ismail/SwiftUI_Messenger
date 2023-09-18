@@ -24,7 +24,7 @@ struct HomeView: View {
                 ActiveNowView()
                     .padding(.top, 20)
                 
-                ChatRowView()
+                ChatRowView(recentMessages: viewModel.recentMessages)
                     .padding(.horizontal)
             }
             .onChange(of: viewModel.selectedUser, perform: { newValue in

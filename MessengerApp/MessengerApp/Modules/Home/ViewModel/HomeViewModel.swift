@@ -16,16 +16,19 @@ final class HomeViewModel: ObservableObject {
     @Published var showNewMessageView: Bool = false
     @Published var user: User?
     @Published var selectedUser: User?
+    @Published var recentMessages: [Message] = []
     @Published var showChatView: Bool = false
     
     
+    private lazy var service = HomeService()
     private var cancellables = Set<AnyCancellable>()
     
     // MARK: - Init
     
     init() {
         
-        addUserSubscriber()        
+        addUserSubscriber()
+        observeRecentMessages()
     }
     
     // MARK: - Methods
@@ -40,4 +43,11 @@ final class HomeViewModel: ObservableObject {
             .store(in: &cancellables)
     }
     
+    func observeRecentMessages() {
+        
+        service.fetchInitialMessage { [weak self] recentMessage in
+            self?.recentMessages.append(recentMessage)
+        }
+        
+    }
 }
