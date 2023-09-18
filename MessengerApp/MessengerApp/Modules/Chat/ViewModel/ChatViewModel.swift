@@ -13,6 +13,7 @@ final class ChatViewModel: ObservableObject {
     // MARK: - Properties
     
     @Published var user: User?
+    @Published var allMessages: [Message] = []
     @Published var messageText: String = ""
     
     private lazy var service = ChatService()
@@ -23,6 +24,8 @@ final class ChatViewModel: ObservableObject {
     init(user: User?) {
         
         self.user = user
+        observeNewMessages()
+        
     }
     
     
@@ -35,4 +38,14 @@ final class ChatViewModel: ObservableObject {
         service.sendNewMessage(messageText, toUser: user)
         messageText = ""
     }
+    
+   private func observeNewMessages() {
+       
+       service.fetchAllMessage(chatPartner: user) { [weak self] messages in
+           self?.allMessages.append(contentsOf: messages ?? [])
+       }
+      
+    }
+    
+    
 }

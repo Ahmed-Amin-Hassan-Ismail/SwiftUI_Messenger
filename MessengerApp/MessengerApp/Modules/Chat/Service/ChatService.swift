@@ -15,4 +15,10 @@ final class ChatService {
         
         FirestoreManager.shared.sendNewMessage(textMessage, toUser: user)
     }
+    
+    
+    func fetchAllMessage(chatPartner: User?, completion: @escaping ([Message]?) -> Void) {
+        
+        FirestoreManager.shared.fetchAllMessage(chatPartner: chatPartner, completion: completion)
+    }
 }

@@ -67,5 +67,29 @@ final class FirestoreManager {
         currentUserRef.setData(messageData)
         chatPartnerRef.document(messageId).setData(messageData)
     }
+    
+    func fetchAllMessage(chatPartner: User?, completion: @escaping ([Message]?) -> Void) {
+        guard let uid = AuthenticationManager.shared.getUserUid(),
+              let chatPartnerId = chatPartner?.id else { return }
+        
+        let query = messageCollection.document(uid).collection(chatPartnerId).order(by: "timestamp", descending: false)
+            
+            query.addSnapshotListener { snapshot, error in
+                guard error == nil else {
+                    completion(nil)
+                    return
+                }
+                
+                guard let changes = snapshot?.documentChanges.filter({ $0.type == .added }) else { return }
+                
+                var messages = changes.compactMap({ try? $0.document.data(as: Message.self) })
+                
+                for (index, message) in messages.enumerated() where !message.isFromCurrentUser {
+                    messages[index].user = chatPartner
+                }
+                
+                completion(messages)
+            }
+    }
 }
 

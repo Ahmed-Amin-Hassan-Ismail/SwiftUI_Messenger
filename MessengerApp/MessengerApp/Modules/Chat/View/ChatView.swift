@@ -30,8 +30,8 @@ struct ChatView: View {
                     
                     headerView
                     
-                    ForEach(0...10, id: \.self) { _ in
-                        ChatMessageRow(isFromCurrentUser: Bool.random())
+                    ForEach(viewModel.allMessages) { message in
+                        ChatMessageRow(message: message)
                     }
                 }
             }

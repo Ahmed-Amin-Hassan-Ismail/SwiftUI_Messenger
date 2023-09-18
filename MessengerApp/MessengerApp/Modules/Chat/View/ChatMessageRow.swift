@@ -11,13 +11,13 @@ struct ChatMessageRow: View {
     
     // MARK: - Properties
     
-    private let isFromCurrentUser: Bool
+    private let message: Message
     
     // MARK: - Init
     
-    init(isFromCurrentUser: Bool) {
+    init(message: Message) {
         
-        self.isFromCurrentUser = isFromCurrentUser
+        self.message = message
     }
     
     // MARK: - Body
@@ -26,23 +26,23 @@ struct ChatMessageRow: View {
         
         HStack {
             
-            if isFromCurrentUser {
+            if message.isFromCurrentUser {
                 Spacer()
             }
 
-            CircularImageView(user: DeveloperPreview.instance.user, imageSize: .xSmall)
+            CircularImageView(user: message.user, imageSize: .xSmall)
                 .offset(y: 30)
-                .opacity(isFromCurrentUser ? 0 : 1.0)
+                .opacity(message.isFromCurrentUser ? 0 : 1.0)
             
-            Text("My name is ahmed amin, i am iOS Developer")
+            Text(message.textMessage ?? "")
                 .font(.subheadline)
-                .foregroundColor(isFromCurrentUser ? .white : .black)
+                .foregroundColor(message.isFromCurrentUser ? .white : .black)
                 .padding(12)
-                .background(Color(isFromCurrentUser ? .systemBlue : .systemGray5))
-                .clipShape(ChatBubbleShape(isFromCurrentUser: isFromCurrentUser))
-                .frame(maxWidth: UIScreen.main.bounds.width / (isFromCurrentUser ? 1.5 :  1.75), alignment: (isFromCurrentUser ? .trailing : .leading))
+                .background(Color(message.isFromCurrentUser ? .systemBlue : .systemGray5))
+                .clipShape(ChatBubbleShape(isFromCurrentUser: message.isFromCurrentUser))
+                .frame(maxWidth: UIScreen.main.bounds.width / (message.isFromCurrentUser ? 1.5 :  1.75), alignment: (message.isFromCurrentUser ? .trailing : .leading))
             
-            if !isFromCurrentUser {
+            if !message.isFromCurrentUser {
                 Spacer()
             }
             
@@ -53,6 +53,6 @@ struct ChatMessageRow: View {
 
 struct ChatMessageRow_Previews: PreviewProvider {
     static var previews: some View {
-        ChatMessageRow(isFromCurrentUser: false)
+        ChatMessageRow(message: Message())
     }
 }
